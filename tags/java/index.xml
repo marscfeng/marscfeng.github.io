@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/java/</link>
+    <description>Recent content in java on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Mon, 09 Jan 2017 12:46:28 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java.lang.ExceptionInInitializerError</title>
+      <link>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</link>
+      <pubDate>Mon, 09 Jan 2017 12:46:28 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</guid>
+      <description>After i complete to install matlab R2016b on ubuntu, i tried to modify the default fonts. I thought i might make some mistakes and when i restarted MATLAB it threw out some error as follows:
+java.lang.ExceptionInInitializerError at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;init&amp;gt;(XCmdWndView.java:353) at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;clinit&amp;gt;(XCmdWndView.java:314) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;init&amp;gt;(CmdWin.java:96) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;clinit&amp;gt;(CmdWin.java:92) at java.lang.Class.forName0(Native Method) at java.lang.Class.forName(Unknown Source) at com.mathworks.jmi.ClassLoaderManager.loadClass(ClassLoaderManager.java:442) at com.mathworks.jmi.ClassLoaderManager.findClass(ClassLoaderManager.java:422) at com.mathworks.jmi.Matlab$1.findClass(Matlab.java:465) at com.mathworks.util.ClassLoaderBridge.findClass(ClassLoaderBridge.java:24) at com.mathworks.widgets.desk.DTClient.createComponent(DTClient.java:246) at com.mathworks.widgets.desk.Desktop.createClientComponent(Desktop.java:5646) at com.mathworks.mde.desk.MLDesktop.createClientComponent(MLDesktop.java:895) ... However, i could start MATLAB normally on terminal with matlab -nodisplay.</description>
+    </item>
+    
+  </channel>
+</rss>

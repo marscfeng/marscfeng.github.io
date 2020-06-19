@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>seismic unix on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/seismic-unix/</link>
+    <description>Recent content in seismic unix on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Tue, 11 Apr 2017 13:54:38 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/seismic-unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SU常用命令</title>
+      <link>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 11 Apr 2017 13:54:38 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段 常见keywords包括tracl，f</description>
+    </item>
+    
+  </channel>
+</rss>

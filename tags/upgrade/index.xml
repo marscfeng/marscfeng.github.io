@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>upgrade on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/upgrade/</link>
+    <description>Recent content in upgrade on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Sun, 16 Oct 2016 23:22:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac sierra upgrad and internal error</title>
+      <link>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</link>
+      <pubDate>Sun, 16 Oct 2016 23:22:17 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</guid>
+      <description>sierra升级，有什么明显变化吗？感觉不出来，除了整个桌面因为sierra而变得昏黄起来，护眼吧。不过朋友说，用siri练口语倒是不错。 这</description>
+    </item>
+    
+  </channel>
+</rss>

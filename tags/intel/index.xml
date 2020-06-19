@@ -21,5 +21,14 @@
       <description>最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式</description>
     </item>
     
+    <item>
+      <title>install ifort on mac Sierra</title>
+      <link>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</link>
+      <pubDate>Mon, 14 Nov 2016 12:15:27 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</guid>
+      <description>1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生成编译机器码，当然ifort也可以应用</description>
+    </item>
+    
   </channel>
 </rss>

@@ -21,5 +21,14 @@
       <description>SEGY数据结构 SEGY数据结构由文件头和数据体组成。 文件头 总长度为3600字节，分两部分 文件头第一部分长度3200bytes（80byte</description>
     </item>
     
+    <item>
+      <title>IEEE754学习总结</title>
+      <link>http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 21 Oct 2015 08:08:06 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
+      <description>参考&amp;gt;顺水行舟 前言 前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格式（IEEE754标准），此文仅作为总结</description>
+    </item>
+    
   </channel>
 </rss>

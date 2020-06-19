@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qq_light on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/qq_light/</link>
+    <description>Recent content in qq_light on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Mon, 09 Jan 2017 10:59:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/qq_light/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>install QQ_light_deepin on ubuntu 16.10</title>
+      <link>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</link>
+      <pubDate>Mon, 09 Jan 2017 10:59:34 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</guid>
+      <description>when i upgraded my ubunutu from 16.04 to 16.10, i found that i cannot use qq_intel on this platform. It threw out an error indicating that this qq_intel is too old for my QQ account. After some trials, i found qq_light_deepin and it works well on my ubuntu 16.10 platform.
+install crossover  download CROSSOVER 16.0 and install it
+ $ sudo dpkg -i crossover_16.0.0-1.deb # in case of lacking of some dependences, try follows to fix the broken $ sudo apt-get -f install  download CROSSOVER crack and replace the old one under the installation path</description>
+    </item>
+    
+  </channel>
+</rss>

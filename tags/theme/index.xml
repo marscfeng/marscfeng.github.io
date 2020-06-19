@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>theme on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/theme/</link>
+    <description>Recent content in theme on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 19 Jan 2017 19:56:33 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>install macOS theme on ubuntu</title>
+      <link>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</link>
+      <pubDate>Thu, 19 Jan 2017 19:56:33 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</guid>
+      <description>鉴于个人一直使用mac，所以对mac的桌面环境更为喜欢。noobslab的一群天才们在ubuntu每一个版本发布之后都会出一个教程来帮助大家</description>
+    </item>
+    
+  </channel>
+</rss>

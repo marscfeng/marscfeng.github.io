@@ -21,5 +21,32 @@
       <description>最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式</description>
     </item>
     
+    <item>
+      <title>use openmp for your simplified parallelism</title>
+      <link>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</link>
+      <pubDate>Thu, 17 Nov 2016 00:55:10 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</guid>
+      <description>这里主要是废话，权且当作是对上一篇博文的补充。 多数情况下，MPI并不是最好的选择，这两天的测试让我深有体会。要实现MPI，要不就选择用Clu</description>
+    </item>
+    
+    <item>
+      <title>install openmpi on mac Sierra</title>
+      <link>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</link>
+      <pubDate>Mon, 14 Nov 2016 13:43:26 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</guid>
+      <description>1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他是运行处理器之间交流通信的应用接口，这也是</description>
+    </item>
+    
+    <item>
+      <title>install ifort on mac Sierra</title>
+      <link>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</link>
+      <pubDate>Mon, 14 Nov 2016 12:15:27 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</guid>
+      <description>1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生成编译机器码，当然ifort也可以应用</description>
+    </item>
+    
   </channel>
 </rss>

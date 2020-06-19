@@ -52,5 +52,143 @@ $ cd /Applications/MATLAB_R*****.app/bin/ $ vi matlab # add the following line a
 check the lic file &#39;huqi/trial.key&#39; from above link Take MAC for example:  download beyond compare package install replace trial.key under /Applications/Beyond\ Compare.app/Contents/Resources/trial.key with above license save trial.key &amp;amp; restart app  Usage:  install command line tool  e.g., $ bcompare new.f90 old.f90 $ bcompare /Folder1/ /Folder2/ install Beyond Compare plugin on sublime text  Notes:  Refer the comments on huqi&amp;rsquo;s Githu for more info This license works for 4.</description>
     </item>
     
+    <item>
+      <title>SU数据兼容性问题</title>
+      <link>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 04 May 2017 09:18:53 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</guid>
+      <description>When we try to open su format data from others computer, the same error always arises: $ surange &amp;lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between different computers. You know that SEG-Y have at least 5 floating data format, while su possesses only one format belong to the specific computer.</description>
+    </item>
+    
+    <item>
+      <title>SU常用命令</title>
+      <link>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 11 Apr 2017 13:54:38 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段 常见keywords包括tracl，f</description>
+    </item>
+    
+    <item>
+      <title>ubuntu源</title>
+      <link>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</link>
+      <pubDate>Thu, 19 Jan 2017 19:58:03 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</guid>
+      <description>ubuntu用了三四年了，现在才算是知道 ubuntu的源，以及很多公司、高校提供的镜像服务器又是什么。 ubuntu的源的出现应该是为了方便非</description>
+    </item>
+    
+    <item>
+      <title>install macOS theme on ubuntu</title>
+      <link>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</link>
+      <pubDate>Thu, 19 Jan 2017 19:56:33 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</guid>
+      <description>鉴于个人一直使用mac，所以对mac的桌面环境更为喜欢。noobslab的一群天才们在ubuntu每一个版本发布之后都会出一个教程来帮助大家</description>
+    </item>
+    
+    <item>
+      <title>java.lang.ExceptionInInitializerError</title>
+      <link>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</link>
+      <pubDate>Mon, 09 Jan 2017 12:46:28 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</guid>
+      <description>After i complete to install matlab R2016b on ubuntu, i tried to modify the default fonts. I thought i might make some mistakes and when i restarted MATLAB it threw out some error as follows:
+java.lang.ExceptionInInitializerError at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;init&amp;gt;(XCmdWndView.java:353) at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;clinit&amp;gt;(XCmdWndView.java:314) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;init&amp;gt;(CmdWin.java:96) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;clinit&amp;gt;(CmdWin.java:92) at java.lang.Class.forName0(Native Method) at java.lang.Class.forName(Unknown Source) at com.mathworks.jmi.ClassLoaderManager.loadClass(ClassLoaderManager.java:442) at com.mathworks.jmi.ClassLoaderManager.findClass(ClassLoaderManager.java:422) at com.mathworks.jmi.Matlab$1.findClass(Matlab.java:465) at com.mathworks.util.ClassLoaderBridge.findClass(ClassLoaderBridge.java:24) at com.mathworks.widgets.desk.DTClient.createComponent(DTClient.java:246) at com.mathworks.widgets.desk.Desktop.createClientComponent(Desktop.java:5646) at com.mathworks.mde.desk.MLDesktop.createClientComponent(MLDesktop.java:895) ... However, i could start MATLAB normally on terminal with matlab -nodisplay.</description>
+    </item>
+    
+    <item>
+      <title>install QQ_light_deepin on ubuntu 16.10</title>
+      <link>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</link>
+      <pubDate>Mon, 09 Jan 2017 10:59:34 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</guid>
+      <description>when i upgraded my ubunutu from 16.04 to 16.10, i found that i cannot use qq_intel on this platform. It threw out an error indicating that this qq_intel is too old for my QQ account. After some trials, i found qq_light_deepin and it works well on my ubuntu 16.10 platform.
+install crossover  download CROSSOVER 16.0 and install it
+ $ sudo dpkg -i crossover_16.0.0-1.deb # in case of lacking of some dependences, try follows to fix the broken $ sudo apt-get -f install  download CROSSOVER crack and replace the old one under the installation path</description>
+    </item>
+    
+    <item>
+      <title>install openmpi on mac Sierra</title>
+      <link>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</link>
+      <pubDate>Mon, 14 Nov 2016 13:43:26 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</guid>
+      <description>1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他是运行处理器之间交流通信的应用接口，这也是</description>
+    </item>
+    
+    <item>
+      <title>install ifort on mac Sierra</title>
+      <link>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</link>
+      <pubDate>Mon, 14 Nov 2016 12:15:27 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</guid>
+      <description>1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生成编译机器码，当然ifort也可以应用</description>
+    </item>
+    
+    <item>
+      <title>Terminal here on Mac</title>
+      <link>http://marscfeng.github.io/post/Terminal-here-on-Mac/</link>
+      <pubDate>Sat, 29 Oct 2016 02:37:16 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Terminal-here-on-Mac/</guid>
+      <description>今天朋友跟我抱怨，mac下面打开终端太麻烦，转换个路径也很折腾。其实我也觉得麻烦，不过之前用xtraFinder，它提供的很多插件已经能完美</description>
+    </item>
+    
+    <item>
+      <title>edit formula in mac word</title>
+      <link>http://marscfeng.github.io/post/edit-formula-in-mac-word/</link>
+      <pubDate>Tue, 18 Oct 2016 22:14:48 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/edit-formula-in-mac-word/</guid>
+      <description>对于windows用户，给word，ppt添加公式可以直接使用mathtype。 如果你喜欢latex的，mathtype也支持latex语法</description>
+    </item>
+    
+    <item>
+      <title>mac sierra upgrad and internal error</title>
+      <link>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</link>
+      <pubDate>Sun, 16 Oct 2016 23:22:17 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</guid>
+      <description>sierra升级，有什么明显变化吗？感觉不出来，除了整个桌面因为sierra而变得昏黄起来，护眼吧。不过朋友说，用siri练口语倒是不错。 这</description>
+    </item>
+    
+    <item>
+      <title>Btsync下载与安装</title>
+      <link>http://marscfeng.github.io/post/Btsync%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sun, 20 Dec 2015 20:19:50 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Btsync%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/</guid>
+      <description>1.下载linux平台 Btsync 2. 解压并添加环境变量 # cd /usr/local # sudo mkdir btsync # sudo tar xzf stable -C btsync # sudo rm stable # sudo gedit ~/.bashrc &amp;gt; export PATH=$PATH:/usr/local/btsync 3. 配置btsync btsync安装包中没有配置</description>
+    </item>
+    
+    <item>
+      <title>virtualbox deploy win7 in ubuntu</title>
+      <link>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</link>
+      <pubDate>Sun, 20 Dec 2015 20:12:39 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</guid>
+      <description>下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启有时候还是不行 This virtual machine is configured for 64-bit guest operating systems. However, 64-bit operation</description>
+    </item>
+    
+    <item>
+      <title>Seismic Un*x insatll on ubuntu</title>
+      <link>http://marscfeng.github.io/post/Seismic-Un-x-insatll-on-ubuntu/</link>
+      <pubDate>Sun, 20 Dec 2015 20:04:35 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Seismic-Un-x-insatll-on-ubuntu/</guid>
+      <description>下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROOT的路径： # set env for CWP export CWPROOT=/usr/local/CWP export PATH=${CWPROOT}/bin:$PATH Note</description>
+    </item>
+    
+    <item>
+      <title>谈谈我的科研Tools</title>
+      <link>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</link>
+      <pubDate>Fri, 23 Oct 2015 16:03:37 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</guid>
+      <description>多PC同步 云盘 坚果云，多平台 百度云同步盘 for windows BTSync Fast, simple, and secure file syncing for IT and individuals. 一个简单的文件传输工具，他使用p2p协议传输文件，以最大的安全度、网络带宽</description>
+    </item>
+    
   </channel>
 </rss>

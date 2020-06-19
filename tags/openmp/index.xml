@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openmp on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/openmp/</link>
+    <description>Recent content in openmp on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 17 Nov 2016 00:55:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/openmp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>use openmp for your simplified parallelism</title>
+      <link>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</link>
+      <pubDate>Thu, 17 Nov 2016 00:55:10 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</guid>
+      <description>这里主要是废话，权且当作是对上一篇博文的补充。 多数情况下，MPI并不是最好的选择，这两天的测试让我深有体会。要实现MPI，要不就选择用Clu</description>
+    </item>
+    
+  </channel>
+</rss>

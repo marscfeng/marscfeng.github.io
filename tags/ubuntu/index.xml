@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 19 Jan 2017 19:58:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ubuntu源</title>
+      <link>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</link>
+      <pubDate>Thu, 19 Jan 2017 19:58:03 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</guid>
+      <description>ubuntu用了三四年了，现在才算是知道 ubuntu的源，以及很多公司、高校提供的镜像服务器又是什么。 ubuntu的源的出现应该是为了方便非</description>
+    </item>
+    
+    <item>
+      <title>install macOS theme on ubuntu</title>
+      <link>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</link>
+      <pubDate>Thu, 19 Jan 2017 19:56:33 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</guid>
+      <description>鉴于个人一直使用mac，所以对mac的桌面环境更为喜欢。noobslab的一群天才们在ubuntu每一个版本发布之后都会出一个教程来帮助大家</description>
+    </item>
+    
+    <item>
+      <title>install QQ_light_deepin on ubuntu 16.10</title>
+      <link>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</link>
+      <pubDate>Mon, 09 Jan 2017 10:59:34 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</guid>
+      <description>when i upgraded my ubunutu from 16.04 to 16.10, i found that i cannot use qq_intel on this platform. It threw out an error indicating that this qq_intel is too old for my QQ account. After some trials, i found qq_light_deepin and it works well on my ubuntu 16.10 platform.
+install crossover  download CROSSOVER 16.0 and install it
+ $ sudo dpkg -i crossover_16.0.0-1.deb # in case of lacking of some dependences, try follows to fix the broken $ sudo apt-get -f install  download CROSSOVER crack and replace the old one under the installation path</description>
+    </item>
+    
+  </channel>
+</rss>

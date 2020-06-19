@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - F. Cheng&#39;s Talk</title>
+  <title>Seismic Un*x insatll on ubuntu - F. Cheng&#39;s Talk</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="F. Cheng" /><meta name="description" content="title: &amp;lsquo;Seismic Un*x insatll on ubuntu&amp;rsquo; date: 2015-12-20 20:04:35 updated: 2015-12-20 20:04:35 tags: CWP linux seismic categories: Software 下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROO" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+<meta name="author" content="F. Cheng" /><meta name="description" content="下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROOT的路径： # set env for CWP export CWPROOT=/usr/local/CWP export PATH=${CWPROOT}/bin:$PATH Note" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
 
 
 
@@ -39,21 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="title: &lsquo;Seismic Un*x insatll on ubuntu&rsquo; date: 2015-12-20 20:04:35 updated: 2015-12-20 20:04:35 tags: CWP linux seismic categories: Software 下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROO" />
+<meta property="og:title" content="Seismic Un*x insatll on ubuntu" />
+<meta property="og:description" content="下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROOT的路径： # set env for CWP export CWPROOT=/usr/local/CWP export PATH=${CWPROOT}/bin:$PATH Note" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://marscfeng.github.io/post/Seismic-Un-x-insatll-on-ubuntu/" />
+<meta property="article:published_time" content="2015-12-20T20:04:35+00:00" />
+<meta property="article:modified_time" content="2015-12-20T20:04:35+00:00" />
+<meta itemprop="name" content="Seismic Un*x insatll on ubuntu">
+<meta itemprop="description" content="下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROOT的路径： # set env for CWP export CWPROOT=/usr/local/CWP export PATH=${CWPROOT}/bin:$PATH Note">
+<meta itemprop="datePublished" content="2015-12-20T20:04:35&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-20T20:04:35&#43;00:00" />
+<meta itemprop="wordCount" content="393">
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="title: &lsquo;Seismic Un*x insatll on ubuntu&rsquo; date: 2015-12-20 20:04:35 updated: 2015-12-20 20:04:35 tags: CWP linux seismic categories: Software 下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROO">
-
-<meta itemprop="wordCount" content="411">
 
 
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="title: &lsquo;Seismic Un*x insatll on ubuntu&rsquo; date: 2015-12-20 20:04:35 updated: 2015-12-20 20:04:35 tags: CWP linux seismic categories: Software 下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROO"/>
+<meta itemprop="keywords" content="CWP,linux,seismic," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Seismic Un*x insatll on ubuntu"/>
+<meta name="twitter:description" content="下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROOT的路径： # set env for CWP export CWPROOT=/usr/local/CWP export PATH=${CWPROOT}/bin:$PATH Note"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,11 +122,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">Seismic Un*x insatll on ubuntu</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2015-12-20 </span>
+        <div class="post-category">
+            <a href="/categories/Software/"> Software </a>
+            </div>
         
       </div>
     </header>
@@ -144,19 +148,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>title: &lsquo;Seismic Un*x insatll on ubuntu&rsquo;
-date: 2015-12-20 20:04:35
-updated: 2015-12-20 20:04:35
-tags:</p>
-<ul>
-<li>CWP</li>
-<li>linux</li>
-<li>seismic
-categories:</li>
-<li>Software</li>
-</ul>
-<hr>
-<h2 id="下载">下载</h2>
+      <h2 id="下载">下载</h2>
 <p><a href="http://www.cwp.mines.edu/cwpcodes/">CWP/SU</a></p>
 <h2 id="设定-cwproot-环境变量">设定 CWPROOT 环境变量</h2>
 <p>习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROOT的路径：</p>
@@ -225,7 +217,7 @@ make finstall (to install the Fortran codes)
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        0001-01-01
+        2015-12-20
         
     </span>
   </p>
@@ -247,15 +239,19 @@ make finstall (to install the Fortran codes)
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/CWP/">CWP</a>
+          <a href="/tags/linux/">linux</a>
+          <a href="/tags/seismic/">seismic</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+        <a class="prev" href="/post/virtualbox-deploy-win7-in-ubuntu/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-default">virtualbox deploy win7 in ubuntu</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-            <span class="next-text nav-default"></span>
+        <a class="next" href="/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/">
+            <span class="next-text nav-default">谈谈我的科研Tools</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

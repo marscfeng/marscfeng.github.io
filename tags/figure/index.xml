@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>figure on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/figure/</link>
+    <description>Recent content in figure on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Fri, 14 Oct 2016 01:15:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/figure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>export high quality figure from matlab</title>
+      <link>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</link>
+      <pubDate>Fri, 14 Oct 2016 01:15:25 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</guid>
+      <description>对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢python的还是坚持去发掘python吧，尤其</description>
+    </item>
+    
+  </channel>
+</rss>

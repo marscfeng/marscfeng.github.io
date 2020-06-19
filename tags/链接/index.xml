@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>链接 on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/%E9%93%BE%E6%8E%A5/</link>
+    <description>Recent content in 链接 on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Fri, 30 Sep 2016 15:30:35 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/%E9%93%BE%E6%8E%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>marscfeng&#39;s gnufor2 module</title>
+      <link>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</link>
+      <pubDate>Fri, 30 Sep 2016 15:30:35 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</guid>
+      <description>gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛逼，只不过是写好一个gnuplot可</description>
+    </item>
+    
+    <item>
+      <title>my personal makefile module</title>
+      <link>http://marscfeng.github.io/post/my-personal-makefile-module/</link>
+      <pubDate>Thu, 29 Sep 2016 12:25:19 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/my-personal-makefile-module/</guid>
+      <description>module text #--------------------------------------------------------------- # # &amp;lt;&amp;lt; marscfeng&#39;s Makefile template for gcc/gfortran &amp;gt;&amp;gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS += -Wall LDFLAGS = -lm -lsacio -lmtspec -lgnufor2 -lpgbar LDLIBS = -L$(LIB) CC = gcc FC = gfortran #-------------------------------------------------------------------- # Programs Flags #-------------------------------------------------------------------- EXE</description>
+    </item>
+    
+    <item>
+      <title>linux下静动态库的添加</title>
+      <link>http://marscfeng.github.io/post/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/</link>
+      <pubDate>Thu, 29 Sep 2016 09:46:04 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/</guid>
+      <description>静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name]=pr. 在linux环境中, 使用ar命令创建静态库文件</description>
+    </item>
+    
+    <item>
+      <title>GCC编译过程及链接库</title>
+      <link>http://marscfeng.github.io/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/</link>
+      <pubDate>Wed, 21 Oct 2015 14:40:18 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/</guid>
+      <description>编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (As</description>
+    </item>
+    
+  </channel>
+</rss>

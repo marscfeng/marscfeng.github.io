@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - F. Cheng&#39;s Talk</title>
+  <title>SU数据兼容性问题 - F. Cheng&#39;s Talk</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="F. Cheng" /><meta name="description" content="title: SU数据兼容性问题 date: 2017-05-04 09:18:53 updated: 2017-05-04 09:18:53 tags: SU data swap big-endian little-endian categories: Software When we try to open su format data from others computer, the same error always arises: $ surange &amp;lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+<meta name="author" content="F. Cheng" /><meta name="description" content="When we try to open su format data from others computer, the same error always arises: $ surange &amp;lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between different computers. You know that SEG-Y have at least 5 floating data format, while su possesses only one format belong to the specific computer." /><meta name="keywords" content="Geophysics, Seismic, Unix" />
 
 
 
@@ -39,21 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="title: SU数据兼容性问题 date: 2017-05-04 09:18:53 updated: 2017-05-04 09:18:53 tags: SU data swap big-endian little-endian categories: Software When we try to open su format data from others computer, the same error always arises: $ surange &lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between" />
+<meta property="og:title" content="SU数据兼容性问题" />
+<meta property="og:description" content="When we try to open su format data from others computer, the same error always arises: $ surange &lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between different computers. You know that SEG-Y have at least 5 floating data format, while su possesses only one format belong to the specific computer." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" />
+<meta property="article:published_time" content="2017-05-04T09:18:53+00:00" />
+<meta property="article:modified_time" content="2017-05-04T09:18:53+00:00" />
+<meta itemprop="name" content="SU数据兼容性问题">
+<meta itemprop="description" content="When we try to open su format data from others computer, the same error always arises: $ surange &lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between different computers. You know that SEG-Y have at least 5 floating data format, while su possesses only one format belong to the specific computer.">
+<meta itemprop="datePublished" content="2017-05-04T09:18:53&#43;00:00" />
+<meta itemprop="dateModified" content="2017-05-04T09:18:53&#43;00:00" />
+<meta itemprop="wordCount" content="127">
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="title: SU数据兼容性问题 date: 2017-05-04 09:18:53 updated: 2017-05-04 09:18:53 tags: SU data swap big-endian little-endian categories: Software When we try to open su format data from others computer, the same error always arises: $ surange &lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between">
-
-<meta itemprop="wordCount" content="151">
 
 
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="title: SU数据兼容性问题 date: 2017-05-04 09:18:53 updated: 2017-05-04 09:18:53 tags: SU data swap big-endian little-endian categories: Software When we try to open su format data from others computer, the same error always arises: $ surange &lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between"/>
+<meta itemprop="keywords" content="SU,data,swap,big-endian,little-endian," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SU数据兼容性问题"/>
+<meta name="twitter:description" content="When we try to open su format data from others computer, the same error always arises: $ surange &lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between different computers. You know that SEG-Y have at least 5 floating data format, while su possesses only one format belong to the specific computer."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,11 +122,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">SU数据兼容性问题</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2017-05-04 </span>
+        <div class="post-category">
+            <a href="/categories/Software/"> Software </a>
+            </div>
         
       </div>
     </header>
@@ -136,21 +140,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>title: SU数据兼容性问题
-date: 2017-05-04 09:18:53
-updated: 2017-05-04 09:18:53
-tags:</p>
-<ul>
-<li>SU</li>
-<li>data</li>
-<li>swap</li>
-<li>big-endian</li>
-<li>little-endian
-categories:</li>
-<li>Software</li>
-</ul>
-<hr>
-<p>When we try to open su format data from others computer, the same error always arises:</p>
+      <p>When we try to open su format data from others computer, the same error always arises:</p>
 <pre><code>$ surange &lt; 1.su
 
 surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255)
@@ -169,7 +159,7 @@ In order to finish this problem, we need <code>swap</code> that data from <code>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        0001-01-01
+        2017-05-04
         
     </span>
   </p>
@@ -191,15 +181,21 @@ In order to finish this problem, we need <code>swap</code> that data from <code>
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/SU/">SU</a>
+          <a href="/tags/data/">data</a>
+          <a href="/tags/swap/">swap</a>
+          <a href="/tags/big-endian/">big-endian</a>
+          <a href="/tags/little-endian/">little-endian</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+        <a class="prev" href="/post/%E8%BD%AC%E8%BD%BD%E6%9C%89%E5%85%B3J-1%E7%AD%BE%E8%AF%81%E4%B8%A4%E5%B9%B4%E5%9B%9E%E5%9B%BD%E6%9C%8D%E5%BD%B9%E6%94%BF%E7%AD%96%E7%9A%84%E8%BE%9F%E8%B0%A3%E6%80%A7%E6%80%BB%E7%BB%93/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-default">转载:有关J-1签证“两年”回国服役政策的辟谣性总结</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/Terminal-here-on-Mac/">
-            <span class="next-text nav-default"></span>
+        <a class="next" href="/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+            <span class="next-text nav-default">SU常用命令</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

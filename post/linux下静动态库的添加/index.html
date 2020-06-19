@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - F. Cheng&#39;s Talk</title>
+  <title>linux下静动态库的添加 - F. Cheng&#39;s Talk</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="F. Cheng" /><meta name="description" content="title: linux下静动态库的添加 date: 2016-09-29 09:46:04 updated: 2016-09-29 09:46:04 tags: GCC 编译 链接 categories: Programming 静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+<meta name="author" content="F. Cheng" /><meta name="description" content="静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name]=pr. 在linux环境中, 使用ar命令创建静态库文件" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
 
 
 
@@ -39,21 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="title: linux下静动态库的添加 date: 2016-09-29 09:46:04 updated: 2016-09-29 09:46:04 tags: GCC 编译 链接 categories: Programming 静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name" />
+<meta property="og:title" content="linux下静动态库的添加" />
+<meta property="og:description" content="静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name]=pr. 在linux环境中, 使用ar命令创建静态库文件" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://marscfeng.github.io/post/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/" />
+<meta property="article:published_time" content="2016-09-29T09:46:04+00:00" />
+<meta property="article:modified_time" content="2016-09-29T09:46:04+00:00" />
+<meta itemprop="name" content="linux下静动态库的添加">
+<meta itemprop="description" content="静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name]=pr. 在linux环境中, 使用ar命令创建静态库文件">
+<meta itemprop="datePublished" content="2016-09-29T09:46:04&#43;00:00" />
+<meta itemprop="dateModified" content="2016-09-29T09:46:04&#43;00:00" />
+<meta itemprop="wordCount" content="513">
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="title: linux下静动态库的添加 date: 2016-09-29 09:46:04 updated: 2016-09-29 09:46:04 tags: GCC 编译 链接 categories: Programming 静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name">
-
-<meta itemprop="wordCount" content="541">
 
 
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="title: linux下静动态库的添加 date: 2016-09-29 09:46:04 updated: 2016-09-29 09:46:04 tags: GCC 编译 链接 categories: Programming 静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name"/>
+<meta itemprop="keywords" content="GCC,编译,链接," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="linux下静动态库的添加"/>
+<meta name="twitter:description" content="静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name]=pr. 在linux环境中, 使用ar命令创建静态库文件"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,11 +122,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">linux下静动态库的添加</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2016-09-29 </span>
+        <div class="post-category">
+            <a href="/categories/Programming/"> Programming </a>
+            </div>
         
       </div>
     </header>
@@ -146,19 +150,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>title: linux下静动态库的添加
-date: 2016-09-29 09:46:04
-updated: 2016-09-29 09:46:04
-tags:</p>
-<ul>
-<li>GCC</li>
-<li>编译</li>
-<li>链接
-categories:</li>
-<li>Programming</li>
-</ul>
-<hr>
-<h1 id="静态库">静态库</h1>
+      <h1 id="静态库">静态库</h1>
 <p>为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name]=pr.</p>
 <p>在linux环境中, 使用ar命令创建静态库文件。</p>
 <h2 id="ar参数意义如下">ar参数意义如下：</h2>
@@ -170,12 +162,12 @@ categories:</li>
 <p>t: 显示静态库文件中文件的列表</p>
 <p>x: 从静态库文件中提取文件</p>
 <p>a: 把新的目标文件(*.o)添加到静态库文件中现有文件之后</p>
-<pre><code>$ ar -rv libpr.a pr1.o pr2.o 
-    a - pr1.o 
-    a - pr2.o 
-$ ar -t libpr.a 
-    pr1.o 
-    pr2.o 
+<pre><code>$ ar -rv libpr.a pr1.o pr2.o
+    a - pr1.o
+    a - pr2.o
+$ ar -t libpr.a
+    pr1.o
+    pr2.o
 </code></pre><h2 id="编译链接选项">编译链接选项</h2>
 <p>-L 及-l 参数放在后面.其中,-L 加载库文件路径,-l 指明库文件名字.</p>
 <pre><code>$ gcc -o main main.c -L../ -lpr     //生成main
@@ -208,10 +200,7 @@ LIBRARY_PATH =
 
 </code></pre><p>export LIBRARY_PATH=/Users/Mars/.Setup/LIBs:$LIBRARY_PATH
 export LD_LIBRARY_PATH=/Users/Mars/.Setup/LD_LIBs:$LD_LIBRARY_PATH</p>
-<pre><code>
-
-
-</code></pre>
+<pre><code></code></pre>
     </div>
 
     <div class="post-copyright">
@@ -222,7 +211,7 @@ export LD_LIBRARY_PATH=/Users/Mars/.Setup/LD_LIBs:$LD_LIBRARY_PATH</p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        0001-01-01
+        2016-09-29
         
     </span>
   </p>
@@ -244,15 +233,19 @@ export LD_LIBRARY_PATH=/Users/Mars/.Setup/LD_LIBs:$LD_LIBRARY_PATH</p>
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/GCC/">GCC</a>
+          <a href="/tags/%E7%BC%96%E8%AF%91/">编译</a>
+          <a href="/tags/%E9%93%BE%E6%8E%A5/">链接</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/java-lang-ExceptionInInitializerError/">
+        <a class="prev" href="/post/my-personal-makefile-module/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-default">my personal makefile module</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/mac-sierra-upgrad-and-internal-error/">
-            <span class="next-text nav-default"></span>
+        <a class="next" href="/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/">
+            <span class="next-text nav-default">fortran 子程序及其封装</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

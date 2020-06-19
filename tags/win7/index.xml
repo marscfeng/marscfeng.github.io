@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>win7 on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/win7/</link>
+    <description>Recent content in win7 on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Sun, 20 Dec 2015 20:12:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/win7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>virtualbox deploy win7 in ubuntu</title>
+      <link>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</link>
+      <pubDate>Sun, 20 Dec 2015 20:12:39 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</guid>
+      <description>下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启有时候还是不行 This virtual machine is configured for 64-bit guest operating systems. However, 64-bit operation</description>
+    </item>
+    
+  </channel>
+</rss>

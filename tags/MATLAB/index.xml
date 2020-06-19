@@ -32,5 +32,24 @@ $ cd /Applications/MATLAB_R*****.app/bin/ $ vi matlab # add the following line a
       <description>fft与fftrl matlab内建的fft正变换结果，前一半是正频率，后一半是负频率；但是Margrave写的fftrl与ifftrl较为人</description>
     </item>
     
+    <item>
+      <title>java.lang.ExceptionInInitializerError</title>
+      <link>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</link>
+      <pubDate>Mon, 09 Jan 2017 12:46:28 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</guid>
+      <description>After i complete to install matlab R2016b on ubuntu, i tried to modify the default fonts. I thought i might make some mistakes and when i restarted MATLAB it threw out some error as follows:
+java.lang.ExceptionInInitializerError at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;init&amp;gt;(XCmdWndView.java:353) at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;clinit&amp;gt;(XCmdWndView.java:314) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;init&amp;gt;(CmdWin.java:96) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;clinit&amp;gt;(CmdWin.java:92) at java.lang.Class.forName0(Native Method) at java.lang.Class.forName(Unknown Source) at com.mathworks.jmi.ClassLoaderManager.loadClass(ClassLoaderManager.java:442) at com.mathworks.jmi.ClassLoaderManager.findClass(ClassLoaderManager.java:422) at com.mathworks.jmi.Matlab$1.findClass(Matlab.java:465) at com.mathworks.util.ClassLoaderBridge.findClass(ClassLoaderBridge.java:24) at com.mathworks.widgets.desk.DTClient.createComponent(DTClient.java:246) at com.mathworks.widgets.desk.Desktop.createClientComponent(Desktop.java:5646) at com.mathworks.mde.desk.MLDesktop.createClientComponent(MLDesktop.java:895) ... However, i could start MATLAB normally on terminal with matlab -nodisplay.</description>
+    </item>
+    
+    <item>
+      <title>export high quality figure from matlab</title>
+      <link>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</link>
+      <pubDate>Fri, 14 Oct 2016 01:15:25 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</guid>
+      <description>对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢python的还是坚持去发掘python吧，尤其</description>
+    </item>
+    
   </channel>
 </rss>

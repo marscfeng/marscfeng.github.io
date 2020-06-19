@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - F. Cheng&#39;s Talk</title>
+  <title>GCC编译过程及链接库 - F. Cheng&#39;s Talk</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="F. Cheng" /><meta name="description" content="title: GCC编译过程及链接库 date: 2015-10-21 14:40:18 updated: 2015-10-21 14:40:18 tags: GCC 编译 链接 categories: Programming 编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocess" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+<meta name="author" content="F. Cheng" /><meta name="description" content="编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (As" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
 
 
 
@@ -39,21 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="title: GCC编译过程及链接库 date: 2015-10-21 14:40:18 updated: 2015-10-21 14:40:18 tags: GCC 编译 链接 categories: Programming 编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocess" />
+<meta property="og:title" content="GCC编译过程及链接库" />
+<meta property="og:description" content="编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (As" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://marscfeng.github.io/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/" />
+<meta property="article:published_time" content="2015-10-21T14:40:18+00:00" />
+<meta property="article:modified_time" content="2015-10-21T14:40:18+00:00" />
+<meta itemprop="name" content="GCC编译过程及链接库">
+<meta itemprop="description" content="编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (As">
+<meta itemprop="datePublished" content="2015-10-21T14:40:18&#43;00:00" />
+<meta itemprop="dateModified" content="2015-10-21T14:40:18&#43;00:00" />
+<meta itemprop="wordCount" content="730">
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="title: GCC编译过程及链接库 date: 2015-10-21 14:40:18 updated: 2015-10-21 14:40:18 tags: GCC 编译 链接 categories: Programming 编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocess">
-
-<meta itemprop="wordCount" content="756">
 
 
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="title: GCC编译过程及链接库 date: 2015-10-21 14:40:18 updated: 2015-10-21 14:40:18 tags: GCC 编译 链接 categories: Programming 编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocess"/>
+<meta itemprop="keywords" content="GCC,编译,链接," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GCC编译过程及链接库"/>
+<meta name="twitter:description" content="编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (As"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,11 +122,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">GCC编译过程及链接库</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2015-10-21 </span>
+        <div class="post-category">
+            <a href="/categories/Programming/"> Programming </a>
+            </div>
         
       </div>
     </header>
@@ -148,19 +152,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>title: GCC编译过程及链接库
-date: 2015-10-21 14:40:18
-updated: 2015-10-21 14:40:18
-tags:</p>
-<ul>
-<li>GCC</li>
-<li>编译</li>
-<li>链接
-categories:</li>
-<li>Programming</li>
-</ul>
-<hr>
-<h2 id="编译过程">编译过程</h2>
+      <h2 id="编译过程">编译过程</h2>
 <p>GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (Assembly)和连接(Linking)。</p>
 <pre><code>gcc -E test.c -o test.i #预处理，将头文件等整理到相应程序中
 gcc -S test.i -o test.s #编译生成汇编代码
@@ -227,7 +219,7 @@ gcc test.o -o test      #目标文件之间相互连接生成可执行文件
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        0001-01-01
+        2015-10-21
         
     </span>
   </p>
@@ -249,15 +241,19 @@ gcc test.o -o test      #目标文件之间相互连接生成可执行文件
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/GCC/">GCC</a>
+          <a href="/tags/%E7%BC%96%E8%AF%91/">编译</a>
+          <a href="/tags/%E9%93%BE%E6%8E%A5/">链接</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/">
+        <a class="prev" href="/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-default">OSX 10.11下搭建hexo＋github静态博客</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/">
-            <span class="next-text nav-default"></span>
+        <a class="next" href="/post/makefile-%E6%80%BB%E7%BB%93/">
+            <span class="next-text nav-default">makefile 总结</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

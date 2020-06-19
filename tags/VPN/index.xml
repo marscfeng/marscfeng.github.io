@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPN on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/VPN/</link>
+    <description>Recent content in VPN on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Fri, 23 Oct 2015 16:03:37 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/VPN/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>谈谈我的科研Tools</title>
+      <link>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</link>
+      <pubDate>Fri, 23 Oct 2015 16:03:37 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</guid>
+      <description>多PC同步 云盘 坚果云，多平台 百度云同步盘 for windows BTSync Fast, simple, and secure file syncing for IT and individuals. 一个简单的文件传输工具，他使用p2p协议传输文件，以最大的安全度、网络带宽</description>
+    </item>
+    
+  </channel>
+</rss>

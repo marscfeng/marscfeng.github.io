@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/github/</link>
+    <description>Recent content in github on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Wed, 21 Oct 2015 16:09:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OSX 10.11下搭建hexo＋github静态博客</title>
+      <link>http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 21 Oct 2015 16:09:01 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <description>Hexo？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么是静态博客？我不懂，我只知道我讨厌新浪博客、QQ空间这些花里胡哨、拓展性差的网</description>
+    </item>
+    
+  </channel>
+</rss>

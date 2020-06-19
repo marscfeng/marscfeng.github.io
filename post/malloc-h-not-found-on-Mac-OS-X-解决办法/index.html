@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - F. Cheng&#39;s Talk</title>
+  <title>malloc.h not found on Mac OS X 解决办法 - F. Cheng&#39;s Talk</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="F. Cheng" /><meta name="description" content="title: malloc.h not found on Mac OS X 解决办法 date: 2015-10-21 13:26:36 updated: 2015-10-21 13:26:36 tags: malloc OSX C categories: Programming 修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/includ" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+<meta name="author" content="F. Cheng" /><meta name="description" content="修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/include/malloc中 编译的时候 makefile中添" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
 
 
 
@@ -39,21 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="title: malloc.h not found on Mac OS X 解决办法 date: 2015-10-21 13:26:36 updated: 2015-10-21 13:26:36 tags: malloc OSX C categories: Programming 修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/includ" />
+<meta property="og:title" content="malloc.h not found on Mac OS X 解决办法" />
+<meta property="og:description" content="修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/include/malloc中 编译的时候 makefile中添" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://marscfeng.github.io/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" />
+<meta property="article:published_time" content="2015-10-21T13:26:36+00:00" />
+<meta property="article:modified_time" content="2015-10-21T13:26:36+00:00" />
+<meta itemprop="name" content="malloc.h not found on Mac OS X 解决办法">
+<meta itemprop="description" content="修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/include/malloc中 编译的时候 makefile中添">
+<meta itemprop="datePublished" content="2015-10-21T13:26:36&#43;00:00" />
+<meta itemprop="dateModified" content="2015-10-21T13:26:36&#43;00:00" />
+<meta itemprop="wordCount" content="187">
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="title: malloc.h not found on Mac OS X 解决办法 date: 2015-10-21 13:26:36 updated: 2015-10-21 13:26:36 tags: malloc OSX C categories: Programming 修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/includ">
-
-<meta itemprop="wordCount" content="211">
 
 
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="title: malloc.h not found on Mac OS X 解决办法 date: 2015-10-21 13:26:36 updated: 2015-10-21 13:26:36 tags: malloc OSX C categories: Programming 修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/includ"/>
+<meta itemprop="keywords" content="malloc,OSX,C," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="malloc.h not found on Mac OS X 解决办法"/>
+<meta name="twitter:description" content="修改编译参数 OSX 10.5&#43;以——10.11，MAC把malloc.h放在 /usr/include/malloc中 编译的时候 makefile中添"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,11 +122,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">malloc.h not found on Mac OS X 解决办法</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2015-10-21 </span>
+        <div class="post-category">
+            <a href="/categories/Programming/"> Programming </a>
+            </div>
         
       </div>
     </header>
@@ -142,19 +146,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>title: malloc.h not found on Mac OS X 解决办法
-date: 2015-10-21 13:26:36
-updated: 2015-10-21 13:26:36
-tags:</p>
-<ul>
-<li>malloc</li>
-<li>OSX</li>
-<li>C
-categories:</li>
-<li>Programming</li>
-</ul>
-<hr>
-<h2 id="修改编译参数">修改编译参数</h2>
+      <h2 id="修改编译参数">修改编译参数</h2>
 <p>OSX 10.5+以——10.11，MAC把malloc.h放在 /usr/include/malloc中
 编译的时候</p>
 <blockquote>
@@ -183,7 +175,7 @@ It works on my mac.
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        0001-01-01
+        2015-10-21
         
     </span>
   </p>
@@ -205,15 +197,19 @@ It works on my mac.
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/malloc/">malloc</a>
+          <a href="/tags/OSX/">OSX</a>
+          <a href="/tags/C/">C</a>
+          </div>
       <nav class="post-nav">
         <a class="prev" href="/post/makefile-%E6%80%BB%E7%BB%93/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-default">makefile 总结</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/marscfeng-s-gnufor2-module/">
-            <span class="next-text nav-default"></span>
+        <a class="next" href="/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/">
+            <span class="next-text nav-default">SEGY数据格式</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

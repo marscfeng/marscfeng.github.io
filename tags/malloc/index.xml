@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>malloc on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/malloc/</link>
+    <description>Recent content in malloc on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Wed, 21 Oct 2015 13:26:36 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/malloc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>malloc.h not found on Mac OS X 解决办法</title>
+      <link>http://marscfeng.github.io/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Wed, 21 Oct 2015 13:26:36 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>修改编译参数 OSX 10.5+以——10.11，MAC把malloc.h放在 /usr/include/malloc中 编译的时候 makefile中添</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>little-endian on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/little-endian/</link>
+    <description>Recent content in little-endian on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 04 May 2017 09:18:53 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/little-endian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SU数据兼容性问题</title>
+      <link>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 04 May 2017 09:18:53 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</guid>
+      <description>When we try to open su format data from others computer, the same error always arises: $ surange &amp;lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between different computers. You know that SEG-Y have at least 5 floating data format, while su possesses only one format belong to the specific computer.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -21,5 +21,14 @@
       <description>上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script</description>
     </item>
     
+    <item>
+      <title>GMT绘制中国地形图</title>
+      <link>http://marscfeng.github.io/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/</link>
+      <pubDate>Wed, 30 Dec 2015 22:14:33 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/</guid>
+      <description>因为我想把最近三年随同实验室出差的地方、路线一一记录下来，所以我写了这篇博客，目的是记录我用GMT绘制中国地形图并添加不同标识的过程。 OS Mac OSX</description>
+    </item>
+    
   </channel>
 </rss>

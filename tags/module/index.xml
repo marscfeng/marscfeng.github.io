@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>module on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/module/</link>
+    <description>Recent content in module on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Fri, 30 Sep 2016 15:30:35 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>marscfeng&#39;s gnufor2 module</title>
+      <link>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</link>
+      <pubDate>Fri, 30 Sep 2016 15:30:35 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</guid>
+      <description>gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛逼，只不过是写好一个gnuplot可</description>
+    </item>
+    
+    <item>
+      <title>fortran 子程序及其封装</title>
+      <link>http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Wed, 28 Sep 2016 12:20:31 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/</guid>
+      <description>对于Fortran90/95而言，fortran子程序包括：function，external function and subroutine. function，就是严格意义上的for</description>
+    </item>
+    
+  </channel>
+</rss>

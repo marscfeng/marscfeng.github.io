@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cug on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/cug/</link>
+    <description>Recent content in cug on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 19 Jan 2017 19:58:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/cug/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ubuntu源</title>
+      <link>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</link>
+      <pubDate>Thu, 19 Jan 2017 19:58:03 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</guid>
+      <description>ubuntu用了三四年了，现在才算是知道 ubuntu的源，以及很多公司、高校提供的镜像服务器又是什么。 ubuntu的源的出现应该是为了方便非</description>
+    </item>
+    
+  </channel>
+</rss>

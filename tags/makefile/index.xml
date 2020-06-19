@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>makefile on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/makefile/</link>
+    <description>Recent content in makefile on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 29 Sep 2016 12:25:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/makefile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>my personal makefile module</title>
+      <link>http://marscfeng.github.io/post/my-personal-makefile-module/</link>
+      <pubDate>Thu, 29 Sep 2016 12:25:19 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/my-personal-makefile-module/</guid>
+      <description>module text #--------------------------------------------------------------- # # &amp;lt;&amp;lt; marscfeng&#39;s Makefile template for gcc/gfortran &amp;gt;&amp;gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS += -Wall LDFLAGS = -lm -lsacio -lmtspec -lgnufor2 -lpgbar LDLIBS = -L$(LIB) CC = gcc FC = gfortran #-------------------------------------------------------------------- # Programs Flags #-------------------------------------------------------------------- EXE</description>
+    </item>
+    
+    <item>
+      <title>makefile 总结</title>
+      <link>http://marscfeng.github.io/post/makefile-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 21 Oct 2015 14:28:15 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/makefile-%E6%80%BB%E7%BB%93/</guid>
+      <description>常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接器的选项，没有定义，可以指定链接</description>
+    </item>
+    
+  </channel>
+</rss>

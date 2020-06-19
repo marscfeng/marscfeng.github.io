@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - F. Cheng&#39;s Talk</title>
+  <title>makefile 总结 - F. Cheng&#39;s Talk</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="F. Cheng" /><meta name="description" content="title: makefile 总结 date: 2015-10-21 14:28:15 updated: 2015-10-21 14:28:15 tags: makefile C Fortran categories: Programming 常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+<meta name="author" content="F. Cheng" /><meta name="description" content="常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接器的选项，没有定义，可以指定链接" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
 
 
 
@@ -39,21 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="title: makefile 总结 date: 2015-10-21 14:28:15 updated: 2015-10-21 14:28:15 tags: makefile C Fortran categories: Programming 常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接" />
+<meta property="og:title" content="makefile 总结" />
+<meta property="og:description" content="常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接器的选项，没有定义，可以指定链接" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://marscfeng.github.io/post/makefile-%E6%80%BB%E7%BB%93/" />
+<meta property="article:published_time" content="2015-10-21T14:28:15+00:00" />
+<meta property="article:modified_time" content="2015-10-21T14:28:15+00:00" />
+<meta itemprop="name" content="makefile 总结">
+<meta itemprop="description" content="常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接器的选项，没有定义，可以指定链接">
+<meta itemprop="datePublished" content="2015-10-21T14:28:15&#43;00:00" />
+<meta itemprop="dateModified" content="2015-10-21T14:28:15&#43;00:00" />
+<meta itemprop="wordCount" content="316">
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="title: makefile 总结 date: 2015-10-21 14:28:15 updated: 2015-10-21 14:28:15 tags: makefile C Fortran categories: Programming 常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接">
-
-<meta itemprop="wordCount" content="332">
 
 
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="title: makefile 总结 date: 2015-10-21 14:28:15 updated: 2015-10-21 14:28:15 tags: makefile C Fortran categories: Programming 常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接"/>
+<meta itemprop="keywords" content="makefile,C,Fortran," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="makefile 总结"/>
+<meta name="twitter:description" content="常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接器的选项，没有定义，可以指定链接"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,11 +122,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">makefile 总结</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2015-10-21 </span>
+        <div class="post-category">
+            <a href="/categories/Programming/"> Programming </a>
+            </div>
         
       </div>
     </header>
@@ -142,19 +146,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>title: makefile 总结
-date: 2015-10-21 14:28:15
-updated: 2015-10-21 14:28:15
-tags:</p>
-<ul>
-<li>makefile</li>
-<li>C</li>
-<li>Fortran
-categories:</li>
-<li>Programming</li>
-</ul>
-<hr>
-<h2 id="常用变量">常用变量</h2>
+      <h2 id="常用变量">常用变量</h2>
 <p>CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径
 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件
 LDLIBS  链接器的选项，没有定义，可以指定链接库文件路径</p>
@@ -180,7 +172,7 @@ LDLIBS  链接器的选项，没有定义，可以指定链接库文件路径</p
 CC = gfortran
 BIN  = main
 OBJS = *.o
-COBJS = fft.f mlsqr_mod.f90 forHRLRT.f90 main.f90 
+COBJS = fft.f mlsqr_mod.f90 forHRLRT.f90 main.f90
 $(BIN) : $(OBJS)
     $(CC)  $(OBJS) -o $(BIN) $(LDFLAGS)
 
@@ -206,7 +198,7 @@ clean ::
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        0001-01-01
+        2015-10-21
         
     </span>
   </p>
@@ -228,15 +220,19 @@ clean ::
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/makefile/">makefile</a>
+          <a href="/tags/C/">C</a>
+          <a href="/tags/Fortran/">Fortran</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/mac-sierra-upgrad-and-internal-error/">
+        <a class="prev" href="/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-default">GCC编译过程及链接库</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         <a class="next" href="/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
-            <span class="next-text nav-default"></span>
+            <span class="next-text nav-default">malloc.h not found on Mac OS X 解决办法</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
