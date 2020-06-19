@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: 十进制小数转二进制 date: 2015-10-20 22:07:29 tags: 二进制 floating categories: Programming 参考&amp;gt;upzone 十进制小数→二进制小数 方法：“乘2取整” 对十进制小数乘2得到的整数部分和小数" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/%E5%8D%81%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: 十进制小数转二进制 date: 2015-10-20 22:07:29 tags: 二进制 floating categories: Programming 参考&gt;upzone 十进制小数→二进制小数 方法：“乘2取整” 对十进制小数乘2得到的整数部分和小数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/%E5%8D%81%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: 十进制小数转二进制 date: 2015-10-20 22:07:29 tags: 二进制 floating categories: Programming 参考&gt;upzone 十进制小数→二进制小数 方法：“乘2取整” 对十进制小数乘2得到的整数部分和小数">
+
+<meta itemprop="wordCount" content="686">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: 十进制小数转二进制 date: 2015-10-20 22:07:29 tags: 二进制 floating categories: Programming 参考&gt;upzone 十进制小数→二进制小数 方法：“乘2取整” 对十进制小数乘2得到的整数部分和小数"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#十进制小数二进制小数-方法乘2取整">十进制小数→二进制小数 方法：“乘2取整”</a></li>
+    <li><a href="#十进制小数八进制小数-方法乘8取整">十进制小数→八进制小数 方法：“乘8取整”</a></li>
+    <li><a href="#十进制小数十六进制小数方法乘16取整">十进制小数→十六进制小数方法：“乘16取整”</a></li>
+    <li><a href="#非十进制数之间的转换">非十进制数之间的转换</a>
+      <ul>
+        <li><a href="#二进制数与八进制数之间的转换">二进制数与八进制数之间的转换</a></li>
+        <li><a href="#二进制与十六进制转换">二进制与十六进制转换</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: 十进制小数转二进制
+date: 2015-10-20 22:07:29
+tags:</p>
+<ul>
+<li>二进制</li>
+<li>floating
+categories:</li>
+<li>Programming</li>
+</ul>
+<hr>
+<p>参考&gt;<a href="http://www.cnblogs.com/upzone/articles/1389365.html">upzone</a></p>
+<h2 id="十进制小数二进制小数-方法乘2取整">十进制小数→二进制小数 方法：“乘2取整”</h2>
+<p>对十进制小数乘2得到的整数部分和小数部分,整数部分既是相应的二进制数码,再用2乘小数部分(之前乘后得到新的小数部分),又得到整数和小数部分.
+如此不断重复,直到小数部分为0或达到精度要求为止.第一次所得到为最高位,最后一次得到为最低位
+如:0.25的二进制</p>
+<p>$0.25 * 2=0.5$  取整是0</p>
+<p>$0.5 * 2=1.0 $   取整是1</p>
+<p>即0.25的二进制为 0.01 ( 第一次所得到为最高位,最后一次得到为最低位)</p>
+<p>0.8125的二进制</p>
+<p>0.8125*2=1.625   取整是1</p>
+<p>0.625*2=1.25     取整是1</p>
+<p>0.25*2=0.5       取整是0</p>
+<p>0.5*2=1.0        取整是1</p>
+<p>即0.8125的二进制是0.1101（第一次所得到为最高位,最后一次得到为最低位）</p>
+<h2 id="十进制小数八进制小数-方法乘8取整">十进制小数→八进制小数 方法：“乘8取整”</h2>
+<p>0.71875）10 =（0.56）8</p>
+<p>0.71875*8=5.75 取整5</p>
+<p>0.75*8=6.0      取整6
+即0.56</p>
+<h2 id="十进制小数十六进制小数方法乘16取整">十进制小数→十六进制小数方法：“乘16取整”</h2>
+<p>例如：</p>
+<p>(0.142578125)10=(0.248)16</p>
+<p>0.142578125*16=2.28125 取整2</p>
+<p>0.28125*16=4.5          取整4</p>
+<p>0.5*16=8.0              取整8</p>
+<p>即0.248</p>
+<h2 id="非十进制数之间的转换">非十进制数之间的转换</h2>
+<h3 id="二进制数与八进制数之间的转换">二进制数与八进制数之间的转换</h3>
+<p>转换方法是：以小数点为界，分别向左右每三位二进制数合成一位八进制数，或每一位八进制数展成三位二进制数，不足三位者补0。例如：</p>
+<p>（423.45）8=（100 010 011.100 101）2</p>
+<p>（1001001.1101）2=（001 001 001.110 100）2=（111.64）8</p>
+<h3 id="二进制与十六进制转换">二进制与十六进制转换</h3>
+<p>转换方法：以小数点为界，分别向左右每四位二进制合成一位十六进制数，或每一位十六进制数展成四位二进制数，不足四位者补0。例如：</p>
+<p>（ABCD.EF）16=（1010 1011 1100 1101.1110 1111）2</p>
+<p>（101101101001011.01101）2=（0101 1011 0100 1011.0110 1000）2=（5B4B.68）16</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/virtualbox-deploy-win7-in-ubuntu/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E5%B0%86%E8%B4%9F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

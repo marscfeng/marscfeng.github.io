@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: IEEE754学习总结 date: 2015-10-21 08:08:06 tags: IEEE floating categories: Programming 参考&amp;gt;顺水行舟 前言 前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: IEEE754学习总结 date: 2015-10-21 08:08:06 tags: IEEE floating categories: Programming 参考&gt;顺水行舟 前言 前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: IEEE754学习总结 date: 2015-10-21 08:08:06 tags: IEEE floating categories: Programming 参考&gt;顺水行舟 前言 前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格">
+
+<meta itemprop="wordCount" content="961">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: IEEE754学习总结 date: 2015-10-21 08:08:06 tags: IEEE floating categories: Programming 参考&gt;顺水行舟 前言 前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#预备知识">预备知识</a>
+      <ul>
+        <li><a href="#计算公式">计算公式：</a></li>
+      </ul>
+    </li>
+    <li><a href="#将浮点格式转换成十进制数">将浮点格式转换成十进制数</a>
+      <ul>
+        <li><a href="#例31">[例3.1]</a></li>
+        <li><a href="#例32">[例3.2]</a></li>
+      </ul>
+    </li>
+    <li><a href="#将十进制数转换成浮点格式real4">将十进制数转换成浮点格式（real*4）</a>
+      <ul>
+        <li><a href="#例41">[例4.1]</a></li>
+        <li><a href="#例42">[例4.2]</a></li>
+        <li><a href="#例43">[例4.3]</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: IEEE754学习总结
+date: 2015-10-21 08:08:06
+tags:</p>
+<ul>
+<li>IEEE</li>
+<li>floating
+categories:</li>
+<li>Programming</li>
+</ul>
+<hr>
+<p>参考&gt;<a href="http://www.360doc.com/content/12/0204/15/7661811_184123782.shtml">顺水行舟</a></p>
+<h2 id="前言">前言</h2>
+<p>　　前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格式（IEEE754标准），此文仅作为总结，其中举了几个典型的例子，如果你想深入了解IEEE754标准，我想本文并不太适合您。</p>
+<h2 id="预备知识">预备知识</h2>
+<pre><code>-----------------------------------------------------------------------
+值 　　　　存储为 　　　　　　　　　　　　　　　　　　　　指数偏移量
+real*4 　　1位符号位(s)、8位指数(e)，23位尾数(m,共32位) 　127(7FH)
+real*8 　　1位符号位(s)、11位指数(e)，52位尾数(m,共64位)　1023(3FFH)
+real*10　　1位符号位(s)、15位指数(e)，64位尾数(m,共80位)　16383(3FFFH)
+-----------------------------------------------------------------------
+</code></pre><h3 id="计算公式">计算公式：</h3>
+<p>$V=(-1)^{s}*2^{E}*M$</p>
+<p>当e（各位）为全'0&rsquo;时，$E=1-(2^{e(位数)-1} -1)$；M=m。
+如：real*4是8位，$E=1-(2^{8-1} -1)=1-127=-126$
+即，
+在real*4时：
+$V=(-1)^s*2^{0-126} *m$
+在real*8时：
+$V=(-1)^s*2^{0-1022} *m$</p>
+<p>当e（各位）不为全'0&rsquo;且不为全'1&rsquo;时，$E=e(值)-(2^{e(位数)-1}-1)$；M=1+m。
+即，
+在real*4时：
+$V=(-1)^s*2^{e(值)-127}*(1+m)$
+在real*8时：
+$V=(-1)^s*2^{e(值)-1023} *(1+m)$</p>
+<h2 id="将浮点格式转换成十进制数">将浮点格式转换成十进制数</h2>
+<h3 id="例31">[例3.1]</h3>
+<p>0x00280000（real*4）
+转换成二进制
+00000000001010000000000000000000
+符号位 指数部分（8位） 尾数部分
+0 00000000 01010000000000000000000
+符号位=0；因指数部分=0，则：尾数部分M为m：
+0.01010000000000000000000=0.3125
+该浮点数的十进制为：
+$(-1)^0*2^{-126}*0.3125=3.6734198463196484624023016788195e-39$</p>
+<h3 id="例32">[例3.2]</h3>
+<p>0xC04E000000000000（real*8）
+转换成二进制
+1100000001001110000000000000000000000000000000000000000000000000
+符号位 指数部分（11位） 尾数部分
+1 10000000100 1110000000000000000000000000000000000000000000000000
+符号位=1；指数=1028，因指数部分不为全'0&rsquo;且不为全'1&rsquo;，则：尾数部分M为1+m：
+1.1110000000000000000000000000000000000000000000000000=1.875
+该浮点数的十进制为：
+$(-1)^{1}*2^{1028-1023}*1.875=-60$</p>
+<h2 id="将十进制数转换成浮点格式real4">将十进制数转换成浮点格式（real*4）</h2>
+<h3 id="例41">[例4.1]</h3>
+<p>26.0
+十进制26.0转换成二进制
+11010.0
+规格化二进制数
+1.10100*2^4
+计算指数
+4+127=131
+符号位 指数部分 尾数部分
+0 10000011 10100000000000000000000
+以单精度（real*4）浮点格式存储该数
+0100 0001 1101 0000 0000 0000 0000 0000
+0x41D0 0000</p>
+<h3 id="例42">[例4.2]</h3>
+<p>0.75
+十进制0.75转换成二进制
+0.11
+规格化二进制数
+1.1*2^(-1)
+计算指数
+-1+127=126
+符号位 指数部分 尾数部分
+0 01111110 10000000000000000000000
+以单精度（real*4）浮点格式存储该数
+0011 1111 0100 0000 0000 0000 0000 0000
+0x3F40 0000</p>
+<h3 id="例43">[例4.3]</h3>
+<p>-2.5
+十进制-2.5转换成二进制
+-10.1
+规格化二进制数
+-1.01*2^{1}
+计算指数
+1+127=128
+符号位 指数部分 尾数部分
+1 10000000 01000000000000000000000
+以单精度（real*4）浮点格式存储该数
+1100 0000 0010 0000 0000 0000 0000 0000
+0xC020 0000</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/install-ifort-on-mac-Sierra/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

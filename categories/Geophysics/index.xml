@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geophysics on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/categories/Geophysics/</link>
+    <description>Recent content in Geophysics on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Fri, 17 Nov 2017 20:55:36 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/categories/Geophysics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About FFT in MATLAB</title>
+      <link>http://marscfeng.github.io/post/About-FFT-in-MATLAB/</link>
+      <pubDate>Fri, 17 Nov 2017 20:55:36 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/About-FFT-in-MATLAB/</guid>
+      <description>fft与fftrl matlab内建的fft正变换结果，前一半是正频率，后一半是负频率；但是Margrave写的fftrl与ifftrl较为人</description>
+    </item>
+    
+    <item>
+      <title>plot China map &amp; inside world map with GMT</title>
+      <link>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</link>
+      <pubDate>Thu, 26 Oct 2017 09:49:09 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</guid>
+      <description>上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script</description>
+    </item>
+    
+    <item>
+      <title>SEGY数据格式</title>
+      <link>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Wed, 21 Oct 2015 08:36:36 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</guid>
+      <description>SEGY数据结构 SEGY数据结构由文件头和数据体组成。 文件头 总长度为3600字节，分两部分 文件头第一部分长度3200bytes（80byte</description>
+    </item>
+    
+  </channel>
+</rss>

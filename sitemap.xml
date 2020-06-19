@@ -1,0 +1,513 @@
+<?xml-stylesheet type="text/xsl" href="http://marscfeng.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://marscfeng.github.io/categories/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/data-transfer/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/Fast-data-transfer-sync-using-globus/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/globus/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/categories/Software/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/</loc>
+    <lastmod>2019-05-17T17:49:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/MATLAB/</loc>
+    <lastmod>2018-04-18T19:42:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/PATH/</loc>
+    <lastmod>2018-04-18T19:42:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/Run-Unix-executable-binary-on-MATLAB/</loc>
+    <lastmod>2018-04-18T19:42:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/Unix/</loc>
+    <lastmod>2018-04-18T19:42:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/citation/</loc>
+    <lastmod>2018-03-31T21:49:29+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/CSL/</loc>
+    <lastmod>2018-03-31T21:49:29+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/mendeley/</loc>
+    <lastmod>2018-03-31T21:49:29+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/modify-citation-style-in-mendeley/</loc>
+    <lastmod>2018-03-31T21:49:29+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/diff/</loc>
+    <lastmod>2018-02-26T20:38:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/Free-license-for-beyond-compare-MAC-Win-Linux/</loc>
+    <lastmod>2018-02-26T20:38:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/mac/</loc>
+    <lastmod>2018-02-26T20:38:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/how-to-run-MPI-programs/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/ifort/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/intel/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/linux/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/MPI/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/MPICH/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/categories/Programming/</loc>
+    <lastmod>2018-02-24T22:42:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/hosts/</loc>
+    <lastmod>2017-11-21T12:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/Neteasemusic/</loc>
+    <lastmod>2017-11-21T12:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/categories/NOTE/</loc>
+    <lastmod>2017-11-21T12:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/unblock/</loc>
+    <lastmod>2017-11-21T12:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/unblock-Neteasemusic-for-Overseas-Chinese/</loc>
+    <lastmod>2017-11-21T12:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/About-FFT-in-MATLAB/</loc>
+    <lastmod>2017-11-17T20:55:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/cross-correlation/</loc>
+    <lastmod>2017-11-17T20:55:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/FFT/</loc>
+    <lastmod>2017-11-17T20:55:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/categories/Geophysics/</loc>
+    <lastmod>2017-11-17T20:55:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/chinamap/</loc>
+    <lastmod>2017-10-26T09:49:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/gmt/</loc>
+    <lastmod>2017-10-26T09:49:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/inside-map/</loc>
+    <lastmod>2017-10-26T09:49:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</loc>
+    <lastmod>2017-10-26T09:49:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/pstext/</loc>
+    <lastmod>2017-10-26T09:49:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/psxy/</loc>
+    <lastmod>2017-10-26T09:49:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/about/</loc>
+    <lastmod>2017-10-22T13:51:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/IBM/</loc>
+    <lastmod>2015-10-21T08:36:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/IEEE/</loc>
+    <lastmod>2015-10-21T08:36:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/SEGY/</loc>
+    <lastmod>2015-10-21T08:36:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</loc>
+    <lastmod>2015-10-21T08:36:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/tags/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</loc>
+    <lastmod>2015-10-21T08:36:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/Btsync%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/edit-formula-in-mac-word/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/makefile-%E6%80%BB%E7%BB%93/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/my-personal-makefile-module/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/Seismic-Un-x-insatll-on-ubuntu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/Terminal-here-on-Mac/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/%E5%8D%81%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/%E5%B0%86%E8%B4%9F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://marscfeng.github.io/post/%E8%BD%AC%E8%BD%BD%E6%9C%89%E5%85%B3J-1%E7%AD%BE%E8%AF%81%E4%B8%A4%E5%B9%B4%E5%9B%9E%E5%9B%BD%E6%9C%8D%E5%BD%B9%E6%94%BF%E7%AD%96%E7%9A%84%E8%BE%9F%E8%B0%A3%E6%80%A7%E6%80%BB%E7%BB%93/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

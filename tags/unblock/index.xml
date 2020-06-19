@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unblock on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/unblock/</link>
+    <description>Recent content in unblock on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Tue, 21 Nov 2017 12:21:44 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/unblock/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>unblock Neteasemusic for Overseas Chinese </title>
+      <link>http://marscfeng.github.io/post/unblock-Neteasemusic-for-Overseas-Chinese/</link>
+      <pubDate>Tue, 21 Nov 2017 12:21:44 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/unblock-Neteasemusic-for-Overseas-Chinese/</guid>
+      <description>location: USA OS: macOS\iphone\ipad Update: Nov 20, 2017 1. modify hosts for MAC/PC Just like the means to unblock google within the GreatWALL, we could modify the hosts for Neteasemusic by adding the following IP addresses into hosts file. # 网易云音乐数据传输服务器反代 79.137.38.20 music.163.com # 归属地查询服务器反代 79.137.38.20 ip.ws.126.net #</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: install ifort on mac Sierra date: 2016-11-14 12:15:27 updated: 2016-11-14 12:15:27 tags: ifort osx sierra intel categories: Software 1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: install ifort on mac Sierra date: 2016-11-14 12:15:27 updated: 2016-11-14 12:15:27 tags: ifort osx sierra intel categories: Software 1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: install ifort on mac Sierra date: 2016-11-14 12:15:27 updated: 2016-11-14 12:15:27 tags: ifort osx sierra intel categories: Software 1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生">
+
+<meta itemprop="wordCount" content="1222">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: install ifort on mac Sierra date: 2016-11-14 12:15:27 updated: 2016-11-14 12:15:27 tags: ifort osx sierra intel categories: Software 1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#31-download-ifort-package">3.1 download ifort package</a></li>
+    <li><a href="#32-install-ifort-package">3.2 install ifort package</a></li>
+    <li><a href="#33-set-environment-variables">3.3 set environment variables</a>
+      <ul>
+        <li><a href="#1-如何确认shell类型">1). 如何确认shell类型？</a></li>
+        <li><a href="#2-执行脚本文件">2). 执行脚本文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#34-确认安装成功">3.4 确认安装成功</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: install ifort on mac Sierra
+date: 2016-11-14 12:15:27
+updated: 2016-11-14 12:15:27
+tags:</p>
+<ul>
+<li>ifort</li>
+<li>osx</li>
+<li>sierra</li>
+<li>intel
+categories:</li>
+<li>Software</li>
+</ul>
+<hr>
+<h1 id="1-about-ifort">1. About ifort</h1>
+<p><a href="https://en.wikipedia.org/wiki/Intel_Fortran_Compiler">Intel Fortran Compiler</a>, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X.</p>
+<p>ifort主要是为<a href="https://en.wikipedia.org/wiki/X86-64#Intel_64">intel64处理</a>和<a href="https://en.wikipedia.org/wiki/IA-32">i386处理器</a>生成编译机器码，当然ifort也可以应用于部分<a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices">AMD处理器</a>。在windwos中，他就是熟知的  intel virtual fortran, 可以添加到intel virtual studio进行界面化编译工作；在linux和osx中，他就是intel fortran， 一般通过命令行方式编译、调试、执行。</p>
+<p>与gcc一样，ifort也支持openmp。</p>
+<h1 id="2-ifort-packgeing">2. ifort packgeing</h1>
+<p>ifort目前是<a href="https://en.wikipedia.org/wiki/Intel_Parallel_Studio">intel parallel studio XE 2017</a>的一部分，目前该套装已经包含了<a href="https://en.wikipedia.org/wiki/Math_Kernel_Library">IMKL库</a>。</p>
+<p>在2010年之前，ifort都是叫intel fortran compiler，之后intel开始集成了更多的功能和库更名为intel fortran comopser XE；而2015之后，intel又集成C和F到界面化IDE，ifort便成为了intel parallel studio XE的一部分。</p>
+<p>但是，因为操作系统不同，intel composer版本也有所不同，比如intel为windows和linux提供了集成C和F的intel parallel studio，但是对于osx目前只有单独的C或者F的composer。</p>
+<h1 id="3-install-ifort-on-mac-sierra">3. install ifort on mac Sierra</h1>
+<h2 id="31-download-ifort-package">3.1 download ifort package</h2>
+<p>intel提供了30天的ifort免费试用版，目前Intel® Fortran Compiler是Intel Parallel Studio XE的一部分，也就是最新的Intel® Parallel Studio XE 2017的一部分。</p>
+<p>对于osx用户而言，fortran 和 c的compiler是分开的，因此可以直接通过<a href="https://software.intel.com/en-us/fortran-compilers/try-buy">官网下载</a>fortran版本的intel parallel studio XE。</p>
+<p>不过官网下载需要邮箱验证，也可以直接从我的dropbox分享<a href="https://www.dropbox.com/s/rffmx9wue6wktvh/m_fcompxe_2017.1.040.dmg?dl=0">m_fcompxe_2017.1.040.dmg</a>。</p>
+<h2 id="32-install-ifort-package">3.2 install ifort package</h2>
+<p>对于多数OSX的普通‘USER’用户，请选择‘Administrator’模式，输入‘root’密码之后，根据提示安装；对于‘ROOT’用户，那就选择‘Root’模式安装。</p>
+<h2 id="33-set-environment-variables">3.3 set environment variables</h2>
+<p>安装完composerxe之后，还需要设定环境变量才能正常的试用ifort。对于compiler 17.0而言，环境变量的设置已经非常简单，intel已经把所有的环境变量设置写入到‘compilervars.sh’或者‘compilervars.csh’脚本文件，用户只需要执行脚本即可。</p>
+<h3 id="1-如何确认shell类型">1). 如何确认shell类型？</h3>
+<p>一般来说，大家的shell都是BASH，所以选择执行‘.sh’脚本；对于C shell用户，执行‘.csh’脚本。</p>
+<pre><code>echo $SHELL
+如果输出的是：csh或者是tcsh，那么你用的就是C Shell。
+如果输出的是：bash，sh，zsh，那么你用的就是BASH Shell。
+</code></pre><h3 id="2-执行脚本文件">2). 执行脚本文件</h3>
+<p>该脚本文件默认存放在ifort的安装目录下面的<code>./bin</code>路径下，也就是默认情况下在`</p>
+<p>/opt/intel/bin`路径下，执行之前请确认。</p>
+<p>对于不同的处理器，脚本唯一的一个输入参数是不同的，<code>intel64</code>只适用于64位intel处理器；<code>ia32</code>只适用于32位intel处理器。</p>
+<pre><code>cd /opt/intel/bin
+source compilervars.sh intel64
+</code></pre><h2 id="34-确认安装成功">3.4 确认安装成功</h2>
+<pre><code>&gt; ifort -v
+ifort version 17.0.1
+</code></pre>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/install-macOS-theme-on-ubuntu/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

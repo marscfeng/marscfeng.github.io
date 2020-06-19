@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: SU常用命令 date: 2017-04-11 13:54:38 updated: 2017-04-11 13:54:38 tags: seismic unix plot categories: Software sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: SU常用命令 date: 2017-04-11 13:54:38 updated: 2017-04-11 13:54:38 tags: seismic unix plot categories: Software sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: SU常用命令 date: 2017-04-11 13:54:38 updated: 2017-04-11 13:54:38 tags: seismic unix plot categories: Software sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段">
+
+<meta itemprop="wordCount" content="649">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: SU常用命令 date: 2017-04-11 13:54:38 updated: 2017-04-11 13:54:38 tags: seismic unix plot categories: Software sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sukeyword-查看su关键字">sukeyword 查看su关键字</a></li>
+    <li><a href="#surange-显示地震数据关键字范围">surange 显示地震数据关键字范围</a></li>
+    <li><a href="#sugethw-获取地震数据某一关键字值">sugethw 获取地震数据某一关键字值</a></li>
+    <li><a href="#suwind-截取特定窗口地震数据">suwind 截取特定窗口地震数据</a></li>
+    <li><a href="#suxwigb-用x-windows绘制变面积地震记录波形图">suxwigb 用X-windows绘制变面积地震记录波形图</a></li>
+    <li><a href="#supsimage-绘制灰度或者彩色矢量地震图">supsimage 绘制灰度或者彩色矢量地震图</a></li>
+    <li><a href="#suxcontor-绘制等值线标量地震图">suxcontor 绘制等值线标量地震图</a></li>
+    <li><a href="#supsgraph-绘制矢量地震记录曲线">supsgraph 绘制矢量地震记录曲线</a></li>
+    <li><a href="#merge24-矢量图合并">merge2/4 矢量图合并</a></li>
+    <li><a href="#optional-parameters">Optional parameters</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: SU常用命令
+date: 2017-04-11 13:54:38
+updated: 2017-04-11 13:54:38
+tags:</p>
+<ul>
+<li>seismic unix</li>
+<li>plot
+categories:</li>
+<li>Software</li>
+</ul>
+<hr>
+<h2 id="sukeyword-查看su关键字">sukeyword 查看su关键字</h2>
+<pre><code>%Usage:
+sukeyword -o  %在终端输出segy.h
+sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段
+</code></pre><p>常见keywords包括<code>tracl</code>，<code>fldr</code>，<code>offset</code>，<code>ns</code>等。</p>
+<h2 id="surange-显示地震数据关键字范围">surange 显示地震数据关键字范围</h2>
+<pre><code>%Usage:
+surange &lt; stdin
+%
+$ surange &lt; 1.su
+141 traces:
+tracl    1 141 (1 - 141)
+fldr     1
+tracf    1 141 (1 - 141)
+trid     1
+offset   -1000 1100 (-1000 - 1100)
+gelev    -400000
+selev    -1700000
+sdepth   1700000
+scalel   -1000
+scalco   -1000
+sx       1000000
+gx       0 2100000 (0 - 2100000)
+ns       251
+dt       4000
+trwf     141
+d1       0.004000
+d2       15.000000
+ntr      141
+
+Shot coordinate limits:
+    North(-1000,-0) South(-1000,-0) East(-1000,-0) West(-1000,-0)
+
+Receiver coordinate limits:
+    North(-0,-0) South(-0,-0) East(-0,-0) West(-2100,-0)
+
+Midpoint coordinate limits:
+    North(-500,-0) South(-500,-0) East(-500,-0) West(-1550,-0)
+</code></pre><h2 id="sugethw-获取地震数据某一关键字值">sugethw 获取地震数据某一关键字值</h2>
+<pre><code>%Usage:
+sugethw &lt; stdin key=KEYWORDS
+%
+$ sugethw &lt; 1.su key=tracl
+ tracl=1
+ tracl=2
+ ...
+ tracl=140
+ tracl=141
+</code></pre><h2 id="suwind-截取特定窗口地震数据">suwind 截取特定窗口地震数据</h2>
+<pre><code>%Usage
+suwind &lt; stdinkey=KEYWORDS min=MIN max=MAX &gt; stdout 截取关键字选定范围数据
+suwind &lt; stdinkey=KEYWORDS min=MIN count=NUM &gt; stdout
+suwind &lt; stdin tmin=TMIN tmax=TMAX &gt; stdout 截取特定时间窗口数据
+</code></pre><h2 id="suxwigb-用x-windows绘制变面积地震记录波形图">suxwigb 用X-windows绘制变面积地震记录波形图</h2>
+<pre><code>%Usage:
+suxwigb &lt; stdin [key=KEYWORDS] %关键词未指定的情况下，xigb将以头文件中的比例坐标定义xy轴
+$ suxwigb &lt; 1.su  title=XWIGB-default label1=&quot;TIME&quot;  
+$ suxwigb &lt; 1.su  title=XWIGB-offset label1=&quot;TIME&quot; label2=&quot;OFFSET&quot; key=offset
+$ suxwigb &lt; 1.su  title=XWIGB-trace label1=&quot;TIME&quot; label2=&quot;TRACE&quot; key=tracl
+$ suxwigb &lt; 1.su  title=XWIGB-X label1=&quot;TIME&quot; label2=&quot;X-Coordinate&quot; key=gx
+</code></pre><blockquote>
+<p>-1.标量图因此不适合数字化调整坐标轴长短，直接拖拽窗口来更改坐标轴比例
+-2.在图形窗口上按q键退出图形</p>
+</blockquote>
+<p><img src="http://oacfrhrgj.bkt.clouddn.com/upload/86673a2fe1f2a8e5a80f925041b82e60.png" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/b7c556bd034d82f7248196b0736b9493.png" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/af631280deb2d39c0774a71868743a1f.png" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/5da65d9a62b9afa250e1e0aeb38fd595.png" alt=""></p>
+<h2 id="supsimage-绘制灰度或者彩色矢量地震图">supsimage 绘制灰度或者彩色矢量地震图</h2>
+<pre><code>%Usage
+supsimage &lt; stdin &gt; stdout 
+%
+$ supsimage &lt; 1.su title=IMAGE label1=&quot;TIME&quot; label2=&quot;OFFSET&quot; f2=-1000  hbox=4 wbox=4 &gt; 1.eps
+$ supsimage &lt; 1.su title=IMAGE label1=&quot;TIME&quot; label2=&quot;OFFSET&quot; f2=-1000  hbox=7 wbox=4 wrgb=1.0,0,0 grgb=0,1.0,0 brgb=0,0,1.0 grid1=dash grid2=dash legend=1 lnice=1 &gt; 2.eps
+$ suwind &lt; 1.su key=tracl min=40 max=100 | supsimage  title=IMAGE-xwin label1=&quot;TIME&quot;   hbox=7 wbox=4 &gt; 3.eps
+$ suwind &lt; 1.su tmin=0.8 tmax=1.0 | supsimage title=IMAGE-twin label1=&quot;TIME&quot; label2=&quot;OFFSET&quot; f2=-1000  hbox=7 wbox=4 &gt; 4.eps
+</code></pre><p><img src="http://oacfrhrgj.bkt.clouddn.com/upload/cf29a1b4d509befa3427ee7d675c24e8.jpg" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/a853740a227e5e6f8f6384345767b7bb.jpg" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/1d20a68f143f8abe9e28f5cd07b405b4.jpg" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/2651253144377caf13bc1f25b20cd804.jpg" alt=""></p>
+<h2 id="suxcontor-绘制等值线标量地震图">suxcontor 绘制等值线标量地震图</h2>
+<pre><code>%Usage:
+suxcontor &lt; stdin &gt; stdout
+%
+$ suxcontor &lt; 1.su title=CONTOR label1=&quot;TIME&quot; label2=&quot;OFFSET&quot; f2=-1000 
+</code></pre><h2 id="supsgraph-绘制矢量地震记录曲线">supsgraph 绘制矢量地震记录曲线</h2>
+<pre><code>%Usage:
+supsgraph &lt; stdin  &gt; stdout
+%
+$ supsgraph &lt; 1.su x1beg=0.8 x1end=1.0 x2beg=-1.0e-5 x2end=1.0e-5  label1=&quot;TIME&quot; &gt; 5.eps
+$ supsgraph &lt; 1.su nplot=40 x1beg=0.8 x1end=1.0 x2beg=-1.0e-5 x2end=1.0e-5  label1=&quot;TIME&quot; &gt; 6.eps
+$ suwind &lt; 1.su key=tracl min=40 max=40 | supsgraph x1beg=0.8 x1end=1.0 x2beg=-1.0e-5 x2end=1.0e-5  label1=&quot;TIME&quot; &gt; 7.eps
+
+</code></pre><p><img src="http://oacfrhrgj.bkt.clouddn.com/upload/afbd2494c1894cab66bc2b0abf0051f6.jpg" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/db99241169f0b6da54496f9b21330bb0.jpg" alt="">
+<img src="http://oacfrhrgj.bkt.clouddn.com/upload/f45021de60f13a451aad8626798bb622.jpg" alt=""></p>
+<h2 id="merge24-矢量图合并">merge2/4 矢量图合并</h2>
+<pre><code>%Usage:
+merge2 f1 f2 &gt; fn
+merge4 f1 f2 f3 f4 &gt; fn
+%
+$ merge2 6.eps 7.eps &gt; temp.eps
+</code></pre><p><img src="http://oacfrhrgj.bkt.clouddn.com/upload/766ce24de0d5dc9aa067bd96d9931046.jpg" alt=""></p>
+<h2 id="optional-parameters">Optional parameters</h2>
+<p>更多绘图参数请参考<code>xwigb</code>，<code>psimage</code>，<code>psgraph</code></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/Seismic-Un-x-insatll-on-ubuntu/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

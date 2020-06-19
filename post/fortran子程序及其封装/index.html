@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: fortran 子程序及其封装 date: 2016-09-28 12:20:31 updated: 2016-09-28 12:20:31 tags: fortran module subroutine interface categories: Programming 对于Fortran90/95而言，fortran子程序包括：function，external function" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: fortran 子程序及其封装 date: 2016-09-28 12:20:31 updated: 2016-09-28 12:20:31 tags: fortran module subroutine interface categories: Programming 对于Fortran90/95而言，fortran子程序包括：function，external function" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: fortran 子程序及其封装 date: 2016-09-28 12:20:31 updated: 2016-09-28 12:20:31 tags: fortran module subroutine interface categories: Programming 对于Fortran90/95而言，fortran子程序包括：function，external function">
+
+<meta itemprop="wordCount" content="1225">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: fortran 子程序及其封装 date: 2016-09-28 12:20:31 updated: 2016-09-28 12:20:31 tags: fortran module subroutine interface categories: Programming 对于Fortran90/95而言，fortran子程序包括：function，external function"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#传递参数">传递参数</a></li>
+    <li><a href="#subroutine">subroutine</a></li>
+    <li><a href="#external-function">external function</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: fortran 子程序及其封装
+date: 2016-09-28 12:20:31
+updated: 2016-09-28 12:20:31
+tags:</p>
+<ul>
+<li>fortran</li>
+<li>module</li>
+<li>subroutine</li>
+<li>interface
+categories:</li>
+<li>Programming</li>
+</ul>
+<hr>
+<p>对于Fortran90/95而言，fortran子程序包括：function，external function and subroutine. function，就是严格意义上的fortran内部函数（sum, sqrt, sin, etc)，在主函数及其他子程序中直接调用。</p>
+<pre><code>! sqrt就是一个常见内部函数
+a = sqrt(b^2+c^2)
+</code></pre><p>以下主要介绍自定义函数和子程序及其传递的函数变量，自定义函数本质上就是数学上的函数，一般要传递自变量给自定义函数，返回函数值。子程序不一定是这样，可以没有返值，最重要的是子程序的输入输出都在形参列表中。</p>
+<h2 id="传递参数">传递参数</h2>
+<p>（1）传递参数可以是常量，但只有跟函数定义的参数类型对应才会到想要的结果。如<code>call fx(1.0)</code>就必须用1.0而不是1。</p>
+<p>（2）传递数组参数，在声明时可以用变量赋值它的大小，也可以不指定大小（<em>但是不建议如此，因为编译器不能判断数据的赋值空间会降低编译效率</em>）。</p>
+<pre><code>subroutine fx(num,size) 
+implicit none 
+integer :: size 
+integer, dimension(:) :: num(size) 
+…… 
+return 
+end sobroutine fx
+</code></pre><h2 id="subroutine">subroutine</h2>
+<p>子程序使用比较常见，就是把一段常用代码独立出来方便重复调用。子程序可以传递参数，也可以不传递参数（<em>形参列表就空着</em>），可以返回参数，也可以不返回参数。</p>
+<pre><code>subroutine name (parameter1, parameter2)  
+implicit none       
+integer, intent(in)  :: parameter1
+integer, intent(out) :: parameter2   
+ ……                               
+return 
+end subroutine name
+</code></pre><p>子程序可以直接调用，不管是主函数还是其他子代码，只需要 <code>call subroutine_name(para1,para2)</code>。这里所谓直接调用就是为了强调其与自定义函数不同，不需要在主函数中声明。</p>
+<h2 id="external-function">external function</h2>
+<p>前面已经说，相对于子程序而言，自定义函数一般需要返回值，返回形参也就是函数名，所以在函数本身内部需要定义返回值类型，或者直接在函数名前添加，或者在形参后添加result形参，如:</p>
+<pre><code>! 函数内部定义返回值类型
+function besselj(a,b)
+implicit none
+integer, intent(in) :: a, b
+real*8 :: besselj
+...
+besselj = ....
+return 
+end function besselj
+! 函数名前添加函数类型
+real*8 function besselj(a,b)
+implicit none
+integer, intent(in) :: a, b
+...
+besselj = ....
+return 
+end function besselj
+！函数名后添加result形参
+function besselj(a,b) result(c)
+implicit none
+integer, intent(in) :: a, b
+real*8 :: c
+...
+c = ....
+return 
+end function besselj
+</code></pre><p>因此，在主程序和子代码中都调用自定义函数都需要定义函数类型<code>real*8, external :: besselj</code>。除非在模块中定义了自定义函数，则其调用不需要提前声明其函数类型。</p>
+<h1 id="程序接口">程序接口</h1>
+<p>interface，就是function、subroutine及其相关变量的声明。以下情况必需使用接口：</p>
+<blockquote>
+<ul>
+<li>函数返回值为数组</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>指定参数位置来传递参数</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>调用参数个数不固定（<em>optional</em>）</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>输入指针参数</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>函数返回值为指针</li>
+</ul>
+</blockquote>
+<p>其使用也相对简单，可以放在主程序声明部分，也可以放在module中。</p>
+<pre><code>interface
+      subroutine fx( a,b,c ) 
+         integer, intent(in) :: a
+         real(4), intent(out) :: c
+         integer, optional    :: c
+      end subroutine fx   
+end interface
+</code></pre><h1 id="模块">模块</h1>
+<p>Module不是函数，它用于封装子代码模块，一般是把具有相关功能的函数及变量封装在一起。</p>
+<blockquote>
+<ul>
+<li>moudle中定义的变量在moudule内部的函数可以直接使用</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>moudle中定义的全局变量，在主程序仲可以直接使用</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>module中函数必需写在<strong>contains</strong>命令之后，函数（<em>包括，自定义函数</em>）之间直接调用</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>moudle中可以使用<strong>include</strong>插入其他文件（moudule, subroutine, etc）</li>
+</ul>
+</blockquote>
+<p>主程序或者子代码中调用时，需要在声明之前添加<code>use module_name</code></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/export-high-quality-figure-from-matlab/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

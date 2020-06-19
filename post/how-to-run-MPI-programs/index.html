@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>how to run MPI programs? - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/how-to-run-MPI-programs/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="how to run MPI programs?" />
+<meta property="og:description" content="最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/how-to-run-MPI-programs/" />
+<meta property="article:published_time" content="2018-02-24T22:42:07+00:00" />
+<meta property="article:modified_time" content="2018-02-24T22:42:07+00:00" />
+<meta itemprop="name" content="how to run MPI programs?">
+<meta itemprop="description" content="最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式">
+<meta itemprop="datePublished" content="2018-02-24T22:42:07&#43;00:00" />
+<meta itemprop="dateModified" content="2018-02-24T22:42:07&#43;00:00" />
+<meta itemprop="wordCount" content="853">
+
+
+
+<meta itemprop="keywords" content="ifort,MPI,MPICH,intel,linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="how to run MPI programs?"/>
+<meta name="twitter:description" content="最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">how to run MPI programs?</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-02-24 </span>
+        <div class="post-category">
+            <a href="/categories/Programming/"> Programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#关于mpi命令">关于MPI命令</a></li>
+    <li><a href="#mpi编译">MPI编译</a>
+      <ul>
+        <li><a href="#指定mpi库函数绝对路径">指定MPI库函数绝对路径</a></li>
+        <li><a href="#常见错误cannot-read-from-remote-process">常见错误<code>Cannot read from remote process</code>？</a></li>
+        <li><a href="#root环境编译执行mpi目标程序"><code>root</code>环境编译、执行MPI目标程序</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>最近在编译一个老的有限差分的波场模拟程序，基于<code>fortran</code>的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式<code>np=1</code>才能正确执行，但是一直没找到问题在哪。</p>
+<h2 id="关于mpi命令">关于MPI命令</h2>
+<p>目前常用的MPI库有<code>MPICH</code>，<code>openmp</code>，<code>Intel MPI</code>， 不得不说这确实容易让人混淆。关键这些执行程序都是相同或者相似的，能混用吗？</p>
+<p>FC | MPICH | openmp | Intel MPI
+&ndash; | &ndash;| &ndash;|
+F  | mpif90 / mpifort | mpif90 / mpifort | mpif90(gfortran) / mpiifort(ifort)
+C | mpicc(c) / mpicxx(c++)  | mpicc(c) / mpicxx(c++)  |  mpiicc(icc) / mpiicpc(icpc)</p>
+<p>如何区分这些函数库？多数时候，MPI程序我都是<code>intel compiler</code>编译的，咱们拿<code>fortran</code>来举例子：</p>
+<pre><code>1. openmp,语法相对简单，轻量级MPI库；
+2. MPICH和Intel MPI，都是典型的MPI库，语法基本上一致、复杂；
+3. Intel MPI，毕竟是收费的，并行效率更高；
+4. 用Intel MPI的mpirun来执行MPICH编译的可执行文件是可行的，且相对MPICH的mpirun更高效；
+</code></pre><h2 id="mpi编译">MPI编译</h2>
+<h3 id="指定mpi库函数绝对路径">指定MPI库函数绝对路径</h3>
+<p>既然这些函数库都是这么相似，在这几种函数库都安装的情况下，我们编译的时候最好使用<code>绝对路径</code>来指定使用那种MPI库。</p>
+<h3 id="常见错误cannot-read-from-remote-process">常见错误<code>Cannot read from remote process</code>？</h3>
+<p>这个问题困扰了很多人，<code>ifort</code>安装顺利，MPICH库安装顺利，目标程序编译顺利，串行执行顺利，可并行执行<code>np&gt;1</code>就是出错。但是很多网友都强调<code>root</code>环境，目标程序的编译和执行是OK的，就是在<code>user</code>环境下目标程序无法实现并行。我猜测，也许是<code>ifort</code>和<code>mpif90</code>在<code>root</code>环境下安装（我是喜欢这样的），本地<code>user</code>环境尽管有执行权限但因为用户组的不同在执行的MPI过程中对内存的share仍有可能出现问题（忽略忽略）。</p>
+<p>因此，我试着把<code>ifort</code>和<code>mpif90</code>都在<code>user</code>环境下安装，然后目标程序也在<code>user</code>环境下编译运行，结果仍然是糟糕。OK，I gave up.</p>
+<h3 id="root环境编译执行mpi目标程序"><code>root</code>环境编译、执行MPI目标程序</h3>
+<p>是的，我只能说这是目前我认为肯定OK的MPI程序执行方法，尽管我曾经也是在<code>user</code>环境下编译、执行、工作的。</p>
+<p>Yes，未完待续！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-02-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ifort/">ifort</a>
+          <a href="/tags/MPI/">MPI</a>
+          <a href="/tags/MPICH/">MPICH</a>
+          <a href="/tags/intel/">intel</a>
+          <a href="/tags/linux/">linux</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/Free-license-for-beyond-compare-MAC-Win-Linux/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Free license for beyond compare MAC/Win/Linux</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/unblock-Neteasemusic-for-Overseas-Chinese/">
+            <span class="next-text nav-default">unblock Neteasemusic for Overseas Chinese </span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

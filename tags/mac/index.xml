@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/mac/</link>
+    <description>Recent content in mac on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Mon, 26 Feb 2018 20:38:37 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Free license for beyond compare MAC/Win/Linux</title>
+      <link>http://marscfeng.github.io/post/Free-license-for-beyond-compare-MAC-Win-Linux/</link>
+      <pubDate>Mon, 26 Feb 2018 20:38:37 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Free-license-for-beyond-compare-MAC-Win-Linux/</guid>
+      <description>Thanks HUQI&amp;rsquo;s share!
+check the lic file &#39;huqi/trial.key&#39; from above link Take MAC for example:  download beyond compare package install replace trial.key under /Applications/Beyond\ Compare.app/Contents/Resources/trial.key with above license save trial.key &amp;amp; restart app  Usage:  install command line tool  e.g., $ bcompare new.f90 old.f90 $ bcompare /Folder1/ /Folder2/ install Beyond Compare plugin on sublime text  Notes:  Refer the comments on huqi&amp;rsquo;s Githu for more info This license works for 4.</description>
+    </item>
+    
+  </channel>
+</rss>

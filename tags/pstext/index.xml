@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pstext on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/pstext/</link>
+    <description>Recent content in pstext on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Thu, 26 Oct 2017 09:49:09 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/pstext/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>plot China map &amp; inside world map with GMT</title>
+      <link>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</link>
+      <pubDate>Thu, 26 Oct 2017 09:49:09 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</guid>
+      <description>上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script</description>
+    </item>
+    
+  </channel>
+</rss>

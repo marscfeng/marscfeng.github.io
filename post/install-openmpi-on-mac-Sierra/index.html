@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: install openmpi on mac Sierra date: 2016-11-14 13:43:26 updated: 2016-11-14 13:43:26 tags: openmpi sierra osx mpi ifort gcc categories: Software 1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: install openmpi on mac Sierra date: 2016-11-14 13:43:26 updated: 2016-11-14 13:43:26 tags: openmpi sierra osx mpi ifort gcc categories: Software 1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: install openmpi on mac Sierra date: 2016-11-14 13:43:26 updated: 2016-11-14 13:43:26 tags: openmpi sierra osx mpi ifort gcc categories: Software 1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他">
+
+<meta itemprop="wordCount" content="1119">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: install openmpi on mac Sierra date: 2016-11-14 13:43:26 updated: 2016-11-14 13:43:26 tags: openmpi sierra osx mpi ifort gcc categories: Software 1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#21-install-gnu-compiler">2.1 install GNU compiler</a></li>
+    <li><a href="#22-installifort-compiler">2.2 installifort compiler</a></li>
+    <li><a href="#23-install-openmpi">2.3 install openmpi</a></li>
+    <li><a href="#24-温馨提示">2.4 温馨提示</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: install openmpi on mac Sierra
+date: 2016-11-14 13:43:26
+updated: 2016-11-14 13:43:26
+tags:</p>
+<ul>
+<li>openmpi</li>
+<li>sierra</li>
+<li>osx</li>
+<li>mpi</li>
+<li>ifort</li>
+<li>gcc
+categories:</li>
+<li>Software</li>
+</ul>
+<hr>
+<h1 id="1-about-openmpi">1. About openmpi</h1>
+<p>要说openmpi，首先要说<a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a>，mpi不是一门新的语言，可以认为是一个函数库，实际上，他是运行处理器之间交流通信的应用接口，这也是他名字的来源，Message Passing Interface。</p>
+<p>一般来说，MPI是为，computer clusters，机群服务的，为机群中不同计算机节点提供信息传递接口。但是，鉴于它的本质是帮助不同处理器之间的通信，因此对目前越来越常见的单机多核PC也是适用的，当然个人感觉配置比较麻烦。而<a href="https://www.open-mpi.org/">openmpi</a>，就是一个高性能MPI库，可以方便的解决单机多核中MPI应用问题。</p>
+<h1 id="2-install-openmpi">2. install openmpi</h1>
+<p>openmpi需要依赖C或者F编译器，因此安装之前请确保编译器已经正常安装。</p>
+<h2 id="21-install-gnu-compiler">2.1 install GNU compiler</h2>
+<p>目前gcc已经更新到6.2，对于sierra用户，推荐安装最新版本的gcc（包含gfortran），<a href="http://hpc.sourceforge.net/">gcc-6.2-bin.tar</a>。如果仅仅只想安装gfortran，可以选择<a href="http://hpc.sourceforge.net/"> gfortran-6.2-bin.tar</a>。</p>
+<p>安装过程非常简单，解压之后安装；gcc安装不会覆盖老版本的gcc，但是会更新环境变量。如果想继续使用老版本的gcc，请为老版本的gcc添加环境变量。</p>
+<pre><code>
+sudo tar -xvf gcc-6.2-bin.tar -C /.
+
+</code></pre><p>以上命令会解压并安装gcc，默认会安装在<code>/usr/local/libexec/gcc</code>路径下，如果有老版本的gcc，默认情况下，也会在该路径之下。</p>
+<h2 id="22-installifort-compiler">2.2 installifort compiler</h2>
+<p>之前一直使用GCC，但是对于intel处理器的MacbookPro而言，GCC并不是最好的编译器，ifort或者icc才更适合，但是intel c/f并不免费，所以&hellip;。</p>
+<p>对于想尝试ifort的用户而言，可以参考上一篇博文<a href="http://marscfeng.github.io/2016/11/14/install-ifort-on-mac-Sierra/">《install ifort on mac Sierra》</a>。</p>
+<h2 id="23-install-openmpi">2.3 install openmpi</h2>
+<p><a href="https://www.open-mpi.org/software/ompi/v2.0/">官网下载</a>安装源文件，目前最新版本是<a href="https://www.dropbox.com/s/du3e2wapoz9czal/openmpi-2.0.1.tar.gz?dl=0">openmpi-2.0.1.tar.gz</a>。</p>
+<p>openmpi的安装很简单，解压、配置安装文件、make编译、make安装。</p>
+<pre><code>tar zxvf openmpi-2.0.1.tar.gz
+./configure F77=ifort FC=ifort --prefix=/usr/local
+make all
+sudo make install
+</code></pre><p>对于多编译器的用户，可以通过以上<code>./configure</code>指定编译器类型，比如intel编译器用户可以指定<code>CC=icc CXX=icpc F77=ifort FC=ifort</code>，GNU编译器用户可以指定<code>CC=gcc CXX=gcc F77=gfortran FC=gfortran</code>。当然，也可以像上述语句一样只指定部分编译器类型，因为我安装了gcc（gfortran）和ifort，但是没有安装icc。</p>
+<p>以上安装过程，<code>./configure</code>和<code>make</code>过程配置检查以及文件编译过程相对漫长，请耐心等待。</p>
+<h2 id="24-温馨提示">2.4 温馨提示</h2>
+<p>在OSX环境下安装编译器及编译相关开源代码，多数必须要依赖Xcode，因此及时更新Xcode及其相应命令行工具是必要的。</p>
+<blockquote>
+<ul>
+<li>通过App Store安装Xcode，并升级所有更新；</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>终端安装Xcode命令行工具</li>
+</ul>
+</blockquote>
+<p><code>&gt; xcode-select --install </code></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/install-macOS-theme-on-ubuntu/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/install-QQ-light-deepin-on-ubuntu-16-10/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>intel on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/intel/</link>
+    <description>Recent content in intel on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Sat, 24 Feb 2018 22:42:07 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/intel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>how to run MPI programs?</title>
+      <link>http://marscfeng.github.io/post/how-to-run-MPI-programs/</link>
+      <pubDate>Sat, 24 Feb 2018 22:42:07 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/how-to-run-MPI-programs/</guid>
+      <description>最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式</description>
+    </item>
+    
+  </channel>
+</rss>

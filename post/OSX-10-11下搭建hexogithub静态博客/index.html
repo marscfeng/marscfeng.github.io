@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: OSX 10.11下搭建hexo＋github静态博客 date: 2015-10-21 16:09:01 updated: 2015-10-21 16:09:01 tags: hexo github OSX mathjax .nitric categories: OSX Hexo？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: OSX 10.11下搭建hexo＋github静态博客 date: 2015-10-21 16:09:01 updated: 2015-10-21 16:09:01 tags: hexo github OSX mathjax .nitric categories: OSX Hexo？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: OSX 10.11下搭建hexo＋github静态博客 date: 2015-10-21 16:09:01 updated: 2015-10-21 16:09:01 tags: hexo github OSX mathjax .nitric categories: OSX Hexo？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么">
+
+<meta itemprop="wordCount" content="1136">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: OSX 10.11下搭建hexo＋github静态博客 date: 2015-10-21 16:09:01 updated: 2015-10-21 16:09:01 tags: hexo github OSX mathjax .nitric categories: OSX Hexo？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#注册github账号及创建仓库">注册github账号及创建仓库</a></li>
+    <li><a href="#安装git">安装Git</a></li>
+    <li><a href="#安装hexo">安装Hexo</a></li>
+    <li><a href="#hexo的使用">hexo的使用</a></li>
+    <li><a href="#部署自己的网站">部署自己的网站</a></li>
+    <li><a href="#hexo常见问题">hexo常见问题</a>
+      <ul>
+        <li><a href="#生成静态网页出错">生成静态网页出错</a></li>
+        <li><a href="#发布网页出错">发布网页出错</a></li>
+        <li><a href="#mathjax公式无法渲染">mathjax公式无法渲染</a></li>
+        <li><a href="#push时重复输入用户名密码">push时重复输入用户名密码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: OSX 10.11下搭建hexo＋github静态博客
+date: 2015-10-21 16:09:01
+updated: 2015-10-21 16:09:01
+tags:</p>
+<ul>
+<li>hexo</li>
+<li>github</li>
+<li>OSX</li>
+<li>mathjax</li>
+<li>.nitric
+categories:</li>
+<li>OSX</li>
+</ul>
+<hr>
+<p><a href="https://hexo.io/zh-cn/docs/">Hexo</a>？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么是静态博客？我不懂，我只知道我讨厌新浪博客、QQ空间这些花里胡哨、拓展性差的网站；但是我又没钱自己买域名做网站，也没那时间。平时整理的东西，总想记录在一个安静、简洁的角落，引用一位偶像的话</p>
+<pre><code>学会积累，是科研的第一步。
+</code></pre><p>于是，我偶遇Hexo并爱上了它。</p>
+<h2 id="注册github账号及创建仓库">注册github账号及创建仓库</h2>
+<blockquote>
+<p>注册过程就不多说</p>
+<blockquote>
+<p>建议使用英文小写作为你的ID, e.g. <code>marscfeng</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>为博客创建一个仓库，Repository</p>
+<blockquote>
+<p>注意仓库名称是固定的（Repository name）—— ID.github.io, e.g. <code>marscfeng.github.io</code></p>
+</blockquote>
+</blockquote>
+<h2 id="安装git">安装Git</h2>
+<p>为了在本地建立项目并push到远程仓库中，我们需要在本地电脑上安装Git，OSX下推荐使用<a href="brew.sh">Homebrew</a>来安装。</p>
+<blockquote>
+<p>安装Homebrew</p>
+</blockquote>
+<pre><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre><blockquote>
+<p>安装git</p>
+</blockquote>
+<pre><code>$ brew install git
+</code></pre><h2 id="安装hexo">安装Hexo</h2>
+<p>Hexo是基于Node.js,因此必须安装nodejs，然后用nodejs自带的npm安装hexo</p>
+<blockquote>
+<p>安装node</p>
+</blockquote>
+<pre><code>$ brew install node
+</code></pre><p>有时候网速会影响安装过程，建议直接<a href="https://nodejs.org/en/">Node官网</a>下载安装。</p>
+<blockquote>
+<p>安装Hexo</p>
+</blockquote>
+<p>$ npm install -g hexo-cli</p>
+<h2 id="hexo的使用">hexo的使用</h2>
+<blockquote>
+<p>网站搭建初始化</p>
+</blockquote>
+<pre><code>#新建一个网站，默认在当前文件夹建立网站
+$ hexo init
+#安装依赖关系
+$ npm install
+</code></pre><blockquote>
+<p>新建网页</p>
+</blockquote>
+<pre><code># 默认新建posts，生成在source/_posts下
+$ hexo n &quot;title&quot;
+</code></pre><blockquote>
+<p>启动本地服务器</p>
+</blockquote>
+<pre><code>#生成静态网页文件
+$ hexo g
+#启动服务器
+$ hexo s
+</code></pre><p>初始化之后，在没有做任何修改操作之前，启动服务器，你就可以在本地浏览器欣赏你的原始博客框架，在浏览器输入<code>localhost:4000</code>就可以查看本地博客</p>
+<blockquote>
+<p>发布网站</p>
+</blockquote>
+<pre><code>$ hexo d
+</code></pre><p>在浏览器访问你的仓库就可以看看你的网站了，e.g. <code>https://marscfeng.github.io</code>。</p>
+<h2 id="部署自己的网站">部署自己的网站</h2>
+<blockquote>
+<p>修改_config.yml文件，该文件控制着整个网站的框架、主题等属性</p>
+</blockquote>
+<pre><code>title: marscfeng's talk
+subtitle: Idiot of Geophysics\ Linux\ Mac OSX
+author: Feng Cheng
+language: default #english/zh-CN/zh-TW
+#...
+theme: landscape-plus #landscape-plus是默认的landscape的升级版，本人更为喜欢
+deploy:  
+    type: github  
+    repository: https://github.com/zippera/zippera.github.io.git  
+    branch: master
+</code></pre><blockquote>
+<p>其他部署，比如添加<code>About me</code>、<code>评论</code>等模块，会在后文阐述</p>
+</blockquote>
+<h2 id="hexo常见问题">hexo常见问题</h2>
+<h3 id="生成静态网页出错">生成静态网页出错</h3>
+<pre><code>$ hexo g
+    Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' 
+</code></pre><p>安装插件</p>
+<pre><code>$ npm install hexo --no-optional
+</code></pre><h3 id="发布网页出错">发布网页出错</h3>
+<pre><code>$ hexo d
+    ERROR Deployer not found: git
+</code></pre><p>因为hexo升级3.0需要安装插件</p>
+<pre><code>$ npm install hexo-deployer-git --save
+</code></pre><h3 id="mathjax公式无法渲染">mathjax公式无法渲染</h3>
+<pre><code>$ npm install hexo-math --save
+</code></pre><h3 id="push时重复输入用户名密码">push时重复输入用户名密码</h3>
+<p>github提供了SSH方式进行本地和服务端的链接，但是据自己的尝试和网友反馈，该方法并不可行。
+<a href="https://confluence.atlassian.com/stash/permanently-authenticating-with-git-repositories-282989712.html#notfound">Permanently authenticating with Git repositories</a>给出了两种方法来解决各平台下本地和git服务端链接验证的问题。</p>
+<blockquote>
+<p>Using credential caching</p>
+</blockquote>
+<blockquote>
+<p>Using the .netrc file</p>
+</blockquote>
+<p>多数网友都是选择第二种，因为操作简单</p>
+<pre><code>$ vi ~/.netrc
+# 输入服务端及用户名密码
+machine github.com
+login your-username
+password your-password
+</code></pre><p>多个server就重复上面的三行，分别输入对应的服务器、用户名和密码。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/my-personal-makefile-module/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/Seismic-Un-x-insatll-on-ubuntu/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

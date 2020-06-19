@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: virtualbox deploy win7 in ubuntu date: 2015-12-20 20:12:39 updated: 2015-12-20 20:12:39 tags: linux virtual box win7 usb2.0 categories: Software 下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: virtualbox deploy win7 in ubuntu date: 2015-12-20 20:12:39 updated: 2015-12-20 20:12:39 tags: linux virtual box win7 usb2.0 categories: Software 下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: virtualbox deploy win7 in ubuntu date: 2015-12-20 20:12:39 updated: 2015-12-20 20:12:39 tags: linux virtual box win7 usb2.0 categories: Software 下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启">
+
+<meta itemprop="wordCount" content="560">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: virtualbox deploy win7 in ubuntu date: 2015-12-20 20:12:39 updated: 2015-12-20 20:12:39 tags: linux virtual box win7 usb2.0 categories: Software 下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载virtualbox并安装">下载Virtualbox，并安装</a></li>
+    <li><a href="#选择安装系统win7_64bit">选择安装系统，win7_64bit</a></li>
+    <li><a href="#setting中system中boot-order">Setting中System中boot order</a></li>
+    <li><a href="#安装扩展">安装扩展</a>
+      <ul>
+        <li><a href="#virtualbox-extension">Virtualbox Extension</a></li>
+        <li><a href="#virtualbox-guest-extension">Virtualbox Guest Extension</a></li>
+      </ul>
+    </li>
+    <li><a href="#设置共享文件夹">设置共享文件夹</a></li>
+    <li><a href="#添加usb20支持">添加USB2.0支持</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: virtualbox deploy win7 in ubuntu
+date: 2015-12-20 20:12:39
+updated: 2015-12-20 20:12:39
+tags:</p>
+<ul>
+<li>linux</li>
+<li>virtual box</li>
+<li>win7</li>
+<li>usb2.0</li>
+</ul>
+<p>categories:</p>
+<ul>
+<li>Software</li>
+</ul>
+<hr>
+<h2 id="下载virtualbox并安装">下载Virtualbox，并安装</h2>
+<h2 id="选择安装系统win7_64bit">选择安装系统，win7_64bit</h2>
+<p><strong>注意修改 bios 之后要关闭电源一下！重启有时候还是不行</strong></p>
+<pre><code>
+This virtual machine is configured for 64-bit guest operating systems. However, 64-bit operation is not possible.
+
+This host supports Intel VT-x, but Intel VT-x is disabled.
+
+Intel VT-x might be disabled if it has been disabled in the BIOS/firmware settings or the host has not been power-cycled since changing this setting.
+
+(1) Verify that the BIOS/firmware settings enable Intel VT-x and disable 'trusted execution.'
+
+(2) Power-cycle the host if either of these BIOS/firmware settings have been changed.
+
+(3) Power-cycle the host if you have not done so since installing VMware Workstation.
+
+(4) Update the host's BIOS/firmware to the latest version.
+
+For more detailed information, see http://vmware.com/info?id=152.
+
+</code></pre><h2 id="setting中system中boot-order">Setting中System中boot order</h2>
+<p>Optical光驱的位置应该放在第一位，这样才能从iso中进行windows装机！</p>
+<p><img src="http://ww3.sinaimg.cn/large/bf373a14gw1ez75oq6d5lj21h50ttjyj.jpg" alt="boot order"></p>
+<h2 id="安装扩展">安装扩展</h2>
+<h3 id="virtualbox-extension">Virtualbox Extension</h3>
+<blockquote>
+<p>File&gt;Preferences&gt;Extensions&gt;add</p>
+</blockquote>
+<p>先下载好，再直接安装</p>
+<h3 id="virtualbox-guest-extension">Virtualbox Guest Extension</h3>
+<blockquote>
+<p>Devices&gt;Install Guest Additions</p>
+</blockquote>
+<p><img src="http://ww2.sinaimg.cn/large/bf373a14gw1ez75qfs0taj20dq0aj768.jpg" alt="device"></p>
+<h2 id="设置共享文件夹">设置共享文件夹</h2>
+<p><img src="http://ww3.sinaimg.cn/large/bf373a14gw1ez75qsn6zej209107dwf4.jpg" alt="share1"></p>
+<p><img src="http://ww3.sinaimg.cn/large/bf373a14gw1ez75r9j4gdj20iq0c5q3j.jpg" alt="share2"></p>
+<h2 id="添加usb20支持">添加USB2.0支持</h2>
+<blockquote>
+<ol>
+<li>安装扩展Extension，前文已说过</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>添加ubuntu的host用户到vbox用户组中</li>
+</ol>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>安装完扩展之后就可以在vbox系统配置中添加usb扩展支持</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>添加当前用户到vbox的用户组（vboxusers）</p>
+</blockquote>
+</blockquote>
+<p>这个用户组是vbox自己生成的，但是没有添加用户</p>
+<pre><code>
+#查看当前用户名
+
+$ whoami
+
+mars
+
+#查看vbox用户组，偶尔显示没有，多试试
+
+$ cat /etc/group | grep vbox
+
+vboxusers❌125:
+
+#添加当前用户到vbox用户组
+
+# sudo usermod -a -G vboxusers mars XXXXXXX 害的我的mars从root用户组删除了！
+
+gpasswd -a mars vboxusers #这样说不定可行
+
+# 重启电脑
+
+$ reboot
+
+</code></pre><blockquote>
+<p>进入vbox win7</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Devices&gt;USB&gt;选择你的USB设备就可以查看了</p>
+</blockquote>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/use-openmp-for-your-simplified-parallelism/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E5%8D%81%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

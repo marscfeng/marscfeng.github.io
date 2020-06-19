@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SEGY on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/SEGY/</link>
+    <description>Recent content in SEGY on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Wed, 21 Oct 2015 08:36:36 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/SEGY/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SEGY数据格式</title>
+      <link>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Wed, 21 Oct 2015 08:36:36 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</guid>
+      <description>SEGY数据结构 SEGY数据结构由文件头和数据体组成。 文件头 总长度为3600字节，分两部分 文件头第一部分长度3200bytes（80byte</description>
+    </item>
+    
+  </channel>
+</rss>

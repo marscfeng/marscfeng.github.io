@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: export high quality figure from matlab date: 2016-10-14 01:15:25 updated: 2016-10-14 01:15:25 tags: matlab figure plot export_fig categories: Programming 对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢pyth" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: export high quality figure from matlab date: 2016-10-14 01:15:25 updated: 2016-10-14 01:15:25 tags: matlab figure plot export_fig categories: Programming 对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢pyth" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: export high quality figure from matlab date: 2016-10-14 01:15:25 updated: 2016-10-14 01:15:25 tags: matlab figure plot export_fig categories: Programming 对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢pyth">
+
+<meta itemprop="wordCount" content="2126">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: export high quality figure from matlab date: 2016-10-14 01:15:25 updated: 2016-10-14 01:15:25 tags: matlab figure plot export_fig categories: Programming 对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢pyth"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-导出矢量图出现斜对角灰线">1. 导出矢量图出现斜对角灰线</a></li>
+    <li><a href="#2-retina屏下图片显示模糊">2. Retina屏下图片显示模糊</a></li>
+    <li><a href="#3-tif格式不清晰">3. tif格式不清晰</a></li>
+    <li><a href="#4-emf格式">4. emf格式</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#yair-altmans-export_fig">Yair Altman&rsquo;s export_fig</a></li>
+    <li><a href="#1-export_fig的安装">1. export_fig的安装</a></li>
+    <li><a href="#2-ghostscript">2. ghostscript</a></li>
+    <li><a href="#3-xpdf文件">3. xpdf文件</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: export high quality figure from matlab
+date: 2016-10-14 01:15:25
+updated: 2016-10-14 01:15:25
+tags:</p>
+<ul>
+<li>matlab</li>
+<li>figure</li>
+<li>plot</li>
+<li>export_fig
+categories:</li>
+<li>Programming</li>
+</ul>
+<hr>
+<p>对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢python的还是坚持去发掘python吧，尤其是<a href="http://matplotlib.org/">matplotlib</a>,自我感觉python画图的风格我更喜欢。一个高清无码，一个复古清新。</p>
+<h1 id="matlab_osx绘图的bug">Matlab_OSX绘图的bug</h1>
+<h2 id="1-导出矢量图出现斜对角灰线">1. 导出矢量图出现斜对角灰线</h2>
+<p>说来可笑，这个bug那就是只有在导出矢量图的时候才会出现，一般来说都是在<code>image</code>或者<code>surface</code>等2D绘图，1D曲线图一般不会出问题。bug的原因在于绘制的矢量图被pdf阅读器抗锯齿(走样)机制处理生成新的虚假直线。
+<img src="http://ww3.sinaimg.cn/large/bf373a14gw1f8rdubx64zj21iw118tdi.jpg" alt="">
+mathworks的社区也讨论这个bug很多次了，但是至今还没有看到有人给出一个根本的解决办法。不过庆幸的是windows下面我还没遇到过。
+相关的讨论见下：</p>
+<blockquote>
+<ul>
+<li><a href="https://nl.mathworks.com/matlabcentral/newsreader/view_thread/280185">Please help me produce a nice .eps or .pdf using pcolor</a></li>
+<li><a href="http://nl.mathworks.com/matlabcentral/newsreader/view_thread/268653">flat shading and unexpected thin white lines</a></li>
+<li><a href="http://nl.mathworks.com/matlabcentral/fileexchange/43271-pcolor-eps-fix">PColor-EPS Fix</a></li>
+<li><a href="https://nl.mathworks.com/matlabcentral/newsreader/view_thread/145397">export figure on mac</a></li>
+</ul>
+</blockquote>
+<h2 id="2-retina屏下图片显示模糊">2. Retina屏下图片显示模糊</h2>
+<p>额，这个其实是整个matlab对retina的兼容性问题，不过庆幸的是matlab2016b已经解决了这个bug。</p>
+<h2 id="3-tif格式不清晰">3. tif格式不清晰</h2>
+<p>应该说，想保存高质量的矢量图可以选择，<code>eps</code>,<code>pdf</code>,<code>tif</code>。不过偶尔，这个偶尔有时候也非常讨人厌，<code>tif</code>格式保存的图片并不能伸缩。</p>
+<h2 id="4-emf格式">4. emf格式</h2>
+<p>mac下面是不能导出<code>emf</code>格式，但是windows可以。不过mac下面一样的支持，在<code>Figure&gt;&gt;Edit&gt;&gt;</code>可以通过copy figure来考虑矢量图直接粘贴到<code>word</code>中去。可不幸的是，如此的拷贝偶尔一样会出问题，暂时已经想不清了，以后慢慢补上。</p>
+<h1 id="export_fig">export_fig</h1>
+<p>认识export_fig这个工具箱是mathworks上不小心撞见的，可这个发现真的让我暂时性认为找到了matlab画图的最终利器。</p>
+<h2 id="yair-altmans-export_fig">Yair Altman&rsquo;s export_fig</h2>
+<p><a href="https://github.com/altmany/export_fig">export_fig</a>是Altman的杰作，Github上时刻在更新，有问题也可直接提交。可以说，你看在windows上看到的是什么保存下来的就是什么。是个，这个窗口不仅仅是画图窗口，还是windows，Mac的对角虚线的bug还是不能解决。
+这个工具箱有以下我认为重要的功能：</p>
+<blockquote>
+<ul>
+<li>1.支持导出多种矢量图、位图(eps,pdf,tif,png)</li>
+<li>2.支持自动裁剪figure多余边框</li>
+<li>3.支持透明背景</li>
+<li>4.支持不同分辨率矢量图的导出</li>
+<li>5.支持灰图、彩色图等不同色域保存</li>
+<li>6.支持在线更新</li>
+</ul>
+</blockquote>
+<h2 id="1-export_fig的安装">1. export_fig的安装</h2>
+<p>这个工具箱的牛逼不仅仅在于利用了matlab自带的各种画图函数，还需要调用两个画图助手<a href="http://www.ghostscript.com/">ghostscript</a>和<a href="http://www.foolabs.com/xpdf/home.html">xpdf</a>，因为这两个是跨平台阅读、编辑矢量图的利器。</p>
+<h2 id="2-ghostscript">2. ghostscript</h2>
+<p>对于MAC而言，export_fig会先从<code>/usr/bin/gs</code>和<code>/usr/local/bin/gs</code>这两个路径下寻找ghostscript的可执行二进制文件，如果这两个路径都没有的话，工具箱会从matlab能直接调用的<code>SHELL PATH</code>中搜索，再找不到就会报错。
+如果在安装工具箱之前已经把gs安装到别的位置，那就给matlab的<code>SHELL PATH</code>添加gs的安装路径即可。添加路径类似于bash添加环境变量，只不过修改的文件不同。
+关于这点网上不同人说法不一，我自己的方法是修改<code>/Applications/MATLAB_R2016b.app/bin/matlab</code>，添加<code>export PATH=$PATH:/path1/path2/path3/</code>。</p>
+<p>这一部分可以参考社区里的讨论<a href="http://nl.mathworks.com/matlabcentral/newsreader/view_thread/255609">$PATH in bash shell</a>。路径添加成功可以在matlab的命令窗口输入<code>&gt;&gt; unix(echo $PATH)</code>来确认。
+对于Windows而言，export_fig会先从<code>C:\Program Files\gs\</code>或者<code>C:\Program Files (x86)\gs\</code>中寻找gs，如果还没有找到，那就会搜寻<code>CMD PATH</code>，再找不到也会报错。避免问题复杂化，你还是把文件放在那两个默认位置吧。
+同理，想要matlab调用别的<code>unix</code>或者<code>cmd</code>程序也是一样的要添加路径，不过windows的不一样。
+当然，你也可以自行修改工具箱中的｀ghostscript.m｀文件中<code>gs_path function</code>。</p>
+<pre><code>    % Check whether the binary is on the path
+    if ispc
+        bin = {'gswin32c.exe', 'gswin64c.exe', 'gs'};
+    else
+        bin = {'gs'};
+    end
+    for a = 1:numel(bin)
+        path_ = bin{a};
+        if check_store_gs_path(path_)
+            return
+        end
+    end
+    % Search the obvious places
+    if ispc
+        default_location = 'C:\Program Files\gs\';
+        dir_list = dir(default_location);
+        if isempty(dir_list)
+            default_location = 'C:\Program Files (x86)\gs\'; % Possible location on 64-bit systems
+            dir_list = dir(default_location);
+        end
+        executable = {'\bin\gswin32c.exe', '\bin\gswin64c.exe'};
+        ver_num = 0;
+        % If there are multiple versions, use the newest
+        for a = 1:numel(dir_list)
+            ver_num2 = sscanf(dir_list(a).name, 'gs%g');
+            if ~isempty(ver_num2) &amp;&amp; ver_num2 &gt; ver_num
+                for b = 1:numel(executable)
+                    path2 = [default_location dir_list(a).name executable{b}];
+                    if exist(path2, 'file') == 2
+                        path_ = path2;
+                        ver_num = ver_num2;
+                    end
+                end
+            end
+        end
+        if check_store_gs_path(path_)
+            return
+        end
+    else
+        executable = {'/usr/bin/gs', '/usr/local/bin/gs'};
+        for a = 1:numel(executable)
+            path_ = executable{a};
+            if check_store_gs_path(path_)
+                return
+            end
+        end
+    end
+</code></pre><h2 id="3-xpdf文件">3. xpdf文件</h2>
+<p>在此，我想说类似gs，xpdf要放在<code>C:\Program Files\xpdf\</code>或者｀C:\Program Files (x86)\xpdf\｀或者<code>/usr/bin/pdftops</code>或者 <code>/usr/local/bin/pdftops</code>。
+这里需要说一下，xpdf和gs一样，不管是win还是mac下面都是一些二进制文件，<code>.exe</code>或者无后缀，这些可执行文件放在该放的位置调用他的程序就不会出错。
+否则，你就去修改调用程序吧，xpdf是一系列pdf文件转换程序,以pdftops为例修改<code>pdftops.m</code>文件中的<code>xpdf_path function</code>。</p>
+<pre><code>    if ispc
+        bin = 'pdftops.exe';
+    else
+        bin = 'pdftops';
+    end
+    if check_store_xpdf_path(bin)
+        path_ = bin;
+        return
+    end
+    % Search the obvious places
+    if ispc
+        paths = {'C:\Program Files\xpdf\pdftops.exe', 'C:\Program Files (x86)\xpdf\pdftops.exe'};
+    else
+        paths = {'/usr/bin/pdftops', '/usr/local/bin/pdftops'};
+    end
+</code></pre>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/edit-formula-in-mac-word/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

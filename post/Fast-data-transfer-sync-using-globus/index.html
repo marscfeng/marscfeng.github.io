@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Fast data transfer/sync using globus - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="About Globus Globus is a secure, reliable research data management service. It works as a bridge between the remote Endpoint and the local Endpoint, rather than the cloud.
+With Globus, subscribers can move, share, publish &amp;amp; discover data via a single interface – whether your files live on a supercomputer, lab cluster, tape archive, public cloud or your laptop, you can manage this data from anywhere, using your existing identities, via just a web browser." /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/Fast-data-transfer-sync-using-globus/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Fast data transfer/sync using globus" />
+<meta property="og:description" content="About Globus Globus is a secure, reliable research data management service. It works as a bridge between the remote Endpoint and the local Endpoint, rather than the cloud.
+With Globus, subscribers can move, share, publish &amp; discover data via a single interface – whether your files live on a supercomputer, lab cluster, tape archive, public cloud or your laptop, you can manage this data from anywhere, using your existing identities, via just a web browser." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/Fast-data-transfer-sync-using-globus/" />
+<meta property="article:published_time" content="2019-05-17T17:49:40+00:00" />
+<meta property="article:modified_time" content="2019-05-17T17:49:40+00:00" />
+<meta itemprop="name" content="Fast data transfer/sync using globus">
+<meta itemprop="description" content="About Globus Globus is a secure, reliable research data management service. It works as a bridge between the remote Endpoint and the local Endpoint, rather than the cloud.
+With Globus, subscribers can move, share, publish &amp; discover data via a single interface – whether your files live on a supercomputer, lab cluster, tape archive, public cloud or your laptop, you can manage this data from anywhere, using your existing identities, via just a web browser.">
+<meta itemprop="datePublished" content="2019-05-17T17:49:40&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-17T17:49:40&#43;00:00" />
+<meta itemprop="wordCount" content="497">
+
+
+
+<meta itemprop="keywords" content="globus,data transfer," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fast data transfer/sync using globus"/>
+<meta name="twitter:description" content="About Globus Globus is a secure, reliable research data management service. It works as a bridge between the remote Endpoint and the local Endpoint, rather than the cloud.
+With Globus, subscribers can move, share, publish &amp; discover data via a single interface – whether your files live on a supercomputer, lab cluster, tape archive, public cloud or your laptop, you can manage this data from anywhere, using your existing identities, via just a web browser."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Fast data transfer/sync using globus</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-17 </span>
+        <div class="post-category">
+            <a href="/categories/Software/"> Software </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-globus">About Globus</a></li>
+    <li><a href="#new-user">New User</a>
+      <ul>
+        <li><a href="#1-create-your-globus-id-on-globuswwwglobusorg">1. create your globus ID on <a href="www.globus.org">globus</a></a></li>
+        <li><a href="#2-globus-connect-personal">2. Globus connect personal</a></li>
+        <li><a href="#3-transfer-your-data">3. Transfer your data</a></li>
+      </ul>
+    </li>
+    <li><a href="#globus-automated-transfer">Globus automated transfer</a>
+      <ul>
+        <li><a href="#1-globus-sdk">1. globus-sdk</a></li>
+        <li><a href="#2-globus-automated-transfer-code">2. globus automated transfer code</a></li>
+      </ul>
+    </li>
+    <li><a href="#gdrive-access-via-globus">GDrive access Via Globus</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="about-globus">About Globus</h2>
+<p><a href="https://www.globus.org">Globus</a> is a secure, reliable <strong>research data management</strong> service. It works as a bridge between the remote Endpoint and the local Endpoint, rather than the cloud.</p>
+<pre><code>With Globus, subscribers can move, share, publish &amp; discover data via a single
+interface – whether your files live on a supercomputer, lab cluster, tape archive,
+public cloud or your laptop, you can manage this data from anywhere, using your
+existing identities, via just a web browser. --- from Globus
+</code></pre><p>As for me, it&rsquo;s a better alternative tool for <a href="https://rsync.samba.org/">rsync</a>. I mean beeter, because it faster and easier to setup. BTW, I want to mention that it appears that <a href="https://www.dropbox.com/help/desktop-web/system-requirements">Dropbox has given up Redhat or Centos guys</a>. I mean I have tried kinds of way to walk around but failed on our cluster (<code>OS: Centos 7.5</code>).</p>
+<h2 id="new-user">New User</h2>
+<h3 id="1-create-your-globus-id-on-globuswwwglobusorg">1. create your globus ID on <a href="www.globus.org">globus</a></h3>
+<p>If you have some organization account, link them. LBNL IT encourages employees use Globus for large data transfers, and create the <a href="https://auth.globus.org/p/login?redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fapp.globus.org%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3Dd2qw4bz1ayi&amp;response_type=token&amp;client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&amp;scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&amp;redirect_name=Globus+Web+App">Globus Web App</a> for user login with their LBNL LDAP username/password (Do not need the OTP authorization).</p>
+<h3 id="2-globus-connect-personal">2. Globus connect personal</h3>
+<p>Most new users might try to transfer data between two PCs. Before use Globus and internet to transfer your data, just set two endpoints one for the remote PC and the other for the local PC.
+After you login Globus, the interface will help you to manage your endpoints, e.g., Creat New personal Endpoint. Just follow the instructions step by step.
+Set up the endpoints on your remote and local computer, then you can start your transfers.</p>
+<h3 id="3-transfer-your-data">3. Transfer your data</h3>
+<p>From the last step, you can download the app and set up the preference on your computer. What I would suggest is that control the <strong>Access</strong> panel, which defines the accessible directories on your computer or your local endpoint. Then click the app and choose the &lsquo;Web: Transfer fiels&rsquo; section. It will get you access to your globus account on your browser.</p>
+<p>From the file Manager, choose the two panel mode for your two endpoints. Setup your Collection and path, then start. After globus submits your work, just wait your data at the directory you set.</p>
+<h2 id="globus-automated-transfer">Globus automated transfer</h2>
+<p><a href="https://globus-sdk-python.readthedocs.io/en/stable/">globus-sdk</a> provides a convenient pythonic interface to Globus API. LBNL IT group creates the <a href="https://bitbucket.org/lbl-it-hpcs/globussdkautotransfers/src/master/">globus automated transfer codes based on Globus SDK package</a>. It will be easier for unix guys to make everything done from the command line.</p>
+<h3 id="1-globus-sdk">1. globus-sdk</h3>
+<p><a href="https://globus-sdk-python.readthedocs.io/en/stable/">globus-sdk</a>  requires python 2.7+ or 3.4+, while the globus automated transfer codes based on <a href="https://bitbucket.org/lbl-it-hpcs/globussdkautotransfers/src/master/">Globus SDK package</a> requires python 3.4+. So I suggest to choose python 3.4+ to install globus-sdk as</p>
+<pre><code>pip install globus-sdk
+</code></pre><p>For anaconda user on bearbin, we can install globus-sdk as</p>
+<pre><code>module load anaconda3/4.3.1
+conda create -n globus_env python=3.6
+conda install globus-sdk
+</code></pre><h3 id="2-globus-automated-transfer-code">2. globus automated transfer code</h3>
+<p>For globus automated transfer setup, you can also follow two instructions:</p>
+<ol>
+<li><a href="https://bitbucket.org/lbl-it-hpcs/globussdkautotransfers/src/master/">Globus Automated Transfer README file</a></li>
+<li><a href="https://globus-sdk-python.readthedocs.io/en/stable/tutorial/">globus sdk manual</a></li>
+</ol>
+<h2 id="gdrive-access-via-globus">GDrive access Via Globus</h2>
+<p>just follow lbl IT support <a href="https://commons.lbl.gov/display/itdivision/GDrive+Access+Via+Globus">Gdrive access Via Globus</a>.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-05-17
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/globus/">globus</a>
+          <a href="/tags/data-transfer/">data transfer</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/Run-Unix-executable-binary-on-MATLAB/">
+            <span class="next-text nav-default">Run Unix executable binary on MATLAB</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

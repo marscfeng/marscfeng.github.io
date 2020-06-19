@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://marscfeng.github.io/sitemap.xml

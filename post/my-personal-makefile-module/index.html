@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: my personal makefile module date: 2016-09-29 12:25:19 updated: 2016-09-29 12:25:19 tags: GCC 编译 链接 makefile categories: Programming module text #--------------------------------------------------------------- # # &amp;lt;&amp;lt; marscfeng&#39;s Makefile template for gcc/gfortran &amp;gt;&amp;gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS &#43;= -Wall LDFLAGS =" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/my-personal-makefile-module/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: my personal makefile module date: 2016-09-29 12:25:19 updated: 2016-09-29 12:25:19 tags: GCC 编译 链接 makefile categories: Programming module text #--------------------------------------------------------------- # # &lt;&lt; marscfeng&#39;s Makefile template for gcc/gfortran &gt;&gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS &#43;= -Wall LDFLAGS =" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/my-personal-makefile-module/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: my personal makefile module date: 2016-09-29 12:25:19 updated: 2016-09-29 12:25:19 tags: GCC 编译 链接 makefile categories: Programming module text #--------------------------------------------------------------- # # &lt;&lt; marscfeng&#39;s Makefile template for gcc/gfortran &gt;&gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS &#43;= -Wall LDFLAGS =">
+
+<meta itemprop="wordCount" content="1386">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: my personal makefile module date: 2016-09-29 12:25:19 updated: 2016-09-29 12:25:19 tags: GCC 编译 链接 makefile categories: Programming module text #--------------------------------------------------------------- # # &lt;&lt; marscfeng&#39;s Makefile template for gcc/gfortran &gt;&gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS &#43;= -Wall LDFLAGS ="/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-phony-targets">1. Phony targets</a></li>
+        <li><a href="#2-makefile-rules">2. makefile rules</a></li>
+        <li><a href="#3-automatic-variable">3. automatic variable</a></li>
+        <li><a href="#4-pattern-rules">4. Pattern Rules</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: my personal makefile module
+date: 2016-09-29 12:25:19
+updated: 2016-09-29 12:25:19
+tags:</p>
+<ul>
+<li>GCC</li>
+<li>编译</li>
+<li>链接</li>
+<li>makefile
+categories:</li>
+<li>Programming</li>
+</ul>
+<hr>
+<h1 id="module-text">module text</h1>
+<pre><code>#---------------------------------------------------------------
+#
+# &lt;&lt; marscfeng's Makefile template for gcc/gfortran &gt;&gt;
+# 
+#---------------------------------------------------------------
+# Location Flags for default path of libraries, binaries and modules 
+#---------------------------------------------------------------
+LIB  =     /Users/Mars/.Setup/LIBs/
+MOD  =     /Users/Mars/.Setup/MODs/
+PROG =     /Users/Mars/.Setup/
+
+#--------------------------------------------------------------------
+# Compile&amp;Link Flags
+#--------------------------------------------------------------------
+FFLAGS  = -O -g -fopenmp
+FFLAGS += -Wall
+LDFLAGS = -lm -lsacio -lmtspec -lgnufor2 -lpgbar
+LDLIBS  = -L$(LIB)
+CC      = gcc
+FC      = gfortran
+
+#--------------------------------------------------------------------
+# Programs Flags
+#--------------------------------------------------------------------
+EXE = main
+RUNPATH = ./examples/
+PROGSRC = bessj0.f90 coherence.f90 \
+          preprocess.f90 rglitch.f90 spac.f90
+PROGOBJS = $(PROGSRC:.f90=.o)
+
+#--------------------------------------------------------------------
+# Module Flags for intel and gfortran compiler
+#--------------------------------------------------------------------
+MFLAG = -I
+MODULE = $(MFLAG)$(MOD)
+
+#--------------------------------------------------------------------
+# Compile programs
+#--------------------------------------------------------------------
+all : $(EXE)
+
+$(EXE) : $(PROGOBJS)
+    $(FC) $^ $(FFLAGS) $(LDFLAGS) $(LDLIBS) -o $(PROG)$@
+
+%.o : %.f90
+    $(FC)  $(FFLAGS) $(MODULE) -c $&lt; -o $@
+
+#--------------------------------------------------------------------
+# run
+#--------------------------------------------------------------------
+run:
+    cd $(RUNPATH); $(EXE)
+
+#--------------------------------------------------------------------
+# Clean
+#--------------------------------------------------------------------
+clean:
+    rm -f $(PROG)$(EXE) core *.o
+
+</code></pre><p>Yeah, it&rsquo;s my personal makefile module (download <a href="https://www.dropbox.com/s/ltoidn2govfiyf7/Makefile?dl=0">here</a>) for gcc (<a href="https://gcc.gnu.org/">GNU Compiler Collection</a>). I am writting this rough explanation here to summary some key points of <a href="https://www.gnu.org/software/make/manual/make.html">GNU make</a>.</p>
+<h1 id="platform">platform</h1>
+<blockquote>
+<p>OS: OSX 10.11
+Compiler: gcc 5.1.0 (gfortran included)</p>
+</blockquote>
+<h1 id="location-flags">Location Flags</h1>
+<p>I set these variables in order to tell compiler where my programs come and where they will go.
+<code>LIB</code> variable shows compiler a path to search libraries.
+<code>MOD</code> variable shows compiler a path to search fortran modules.
+<code>PROG</code> variable tells compiler where to put my programs. Commond line 44 fulfills this work by defining <code>$(PROG)$@</code> as final target.</p>
+<pre><code>Note that, the last character of path variables, '/', should never be forgotten. Due to *make* is not able to identify `/Users/Mars/.Setupmain` with what your wanted `/Users/Mars/.Setup/main`. 
+</code></pre><p>It is my personal habits about usage of libraries, modules and binaries that I am used to setting up environment variables and aliases in <code>~/.bash_profile</code>. I have created some private folders for private libs (<em>/Users/Mars/.Setup/LIBs/
+<em>), mods (</em>/Users/Mars/.Setup/MODs/</em>), bins (<em>/Users/Mars/.Setup/</em>). Then i added the following variables in my environment variables list.</p>
+<pre><code>#set env for shared libs
+export LD_LIBRARY_PATH=/Users/Mars/.Setup/LDLIBS:$LD_LIBRARY_PATH
+#set env for static libs
+export LIBRARY_PATH=/Users/Mars/.Setup/LIBs:$LIBRARY_PATH
+</code></pre><p>As mentioned in <a href="http://marscfeng.github.io/2016/09/29/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/">the last blog</a>, however, it is also available to set this variables in makefile. It may shows in your makefile as follws:</p>
+<pre><code>LIBRARY_PATH=/Users/Mars/.Setup/LIBs/
+LD_LIBRARY_PATH=/Users/Mars/.Setup/LDLIBS/
+</code></pre><h1 id="compilelink-flags">Compile&amp;Link Flags</h1>
+<p><code>FFLAGS  = -O -g -fopenmp</code> defines the basic option for compiler. <code>-fopenmp</code> will only work, when <code>!$ OMP</code> conditional compilation sentinels have already been set in your codes.
+<code>FFLAGS += -Wall</code> appends more requists for compiler to show more and more warning infomation, then programmer can check thess tiny mistakes.
+<code>LDFLAGS = -lm -lsacio -lmtspec -lgnufor2 -lpgbar</code> links the whole essential libraries for program <code>main</code>.
+<code>LDLIBS  = -L$(LIB)</code> adds the libs path from <code>$(LIB)</code> to search directory of <em>make</em>.
+<code>CC = gcc</code> defines <em>gcc</em> as chosen compiler for <em>.c, .c++, .cpp, etc</em>.
+<code>FC = gfortran</code> define <em>gfortran</em> as chosen compiler for <em>.f, .f90, etc</em>.</p>
+<pre><code>Note that
+1. '+=' is a appending character to append more text to variable.
+2. ‘#’ in a line of a makefile starts a comment. It and the rest of the line are ignored, except that a trailing backslash not escaped by another backslash will continue the comment across multiple lines. A line containing just a comment (with perhaps spaces before it) is effectively blank, and is ignored. If you want a literal #, escape it with a backslash (e.g., \#). Comments may appear on any line in the makefile, although they are treated specially in certain situations.
+</code></pre><h1 id="programs-flags">Programs Flags</h1>
+<p><code>EXE = main</code> defines the name of the output executable file.
+<code>RUNPATH = ./examples/</code> defines a destination for the <em>exe</em>.
+<code>PROGSRC</code> defines the required source codes to build the <em>exe</em>.
+<code>PROGOBJS = $(PROGSRC:.f90=.o)</code> defines the required prerequisites that the final target (<em>exe</em>) depends on.</p>
+<pre><code>Note that, the backslash (\) character in commond line 28 is used to add newlines. Makefiles use a “line-based” syntax in which the newline character is special and marks the end of a statement. GNU make has no limit on the length of a statement line, up to the amount of memory in your computer. `$(PROGSRC:.f90=.o)` is a classic substitution reference which substitutes the value '.f90' of a variable with alterations '.o' that you specify.
+
+</code></pre><h1 id="module-flags">Module Flags</h1>
+<pre><code>MFLAG = -I
+MODULE = $(MFLAG)$(MOD)
+</code></pre><p>These flags tell the compiler where to include the required modules. Here, i only display module flag for intel(ifort) and gcc(gfortran) compiler. Flags for including modules in some other compilers are listed as follws:</p>
+<pre><code># Sun Compiler
+#MFLAG = -M
+
+# Nag Compiler
+#MFLAG = -i
+#MFLAG = -I
+
+# Absoft Compiler
+#MFLAG = -p
+</code></pre><h1 id="compile-programs">Compile programs</h1>
+<h3 id="1-phony-targets">1. Phony targets</h3>
+<ol>
+<li>one target remade once
+<code>all : $(EXE)</code>, this is a phony targets &lsquo;all&rsquo; and its prerequisite &lsquo;$(EXE)&rsquo;. Yeah, phony targets can have prerequisites. When one directory contains multiple programs, it is most convenient to describe all of the programs in one makefile ./Makefile. Since the target remade by default will be the first one in the makefile, it is common to make this a phony target named ‘all’ and give it, as prerequisites, all the individual programs.</li>
+<li>how to remake specfic target
+You know that <code>run</code> and <code>clean</code> are both phony targets. As mentioned above, the first target <code>all</code> is the target remade by default. But we can also run <code>make run</code> or <code>make clean</code> to choose remake the specific target. So we can also run prerequisite-target by <code>make $(EXE1)</code>.</li>
+</ol>
+<h3 id="2-makefile-rules">2. makefile rules</h3>
+<p>A simple makefile consists of &lsquo;rules&rsquo; with the following shape:</p>
+<pre><code>target … : prerequisites …
+    commond
+    …
+    …
+</code></pre><p>It consists of <code>targets list</code>,<code>prerequisites list</code>,<code>commond</code>, and <code>Tab</code> character. We need to put a <code>Tab</code> character at the beginning of every commond line! This is an obscurity that catches the unwary.
+As for the following rules of my makefile,</p>
+<pre><code>$(EXE) : $(PROGOBJS)
+    $(FC) $^ $(FFLAGS) $(LDFLAGS) $(LDLIBS) -o $(PROG)$@
+</code></pre><p><code>$(EXE)</code> means the target, who depends on prerequisites (<code>$(PROGOBJS)</code>). To remake the target, i give the rule as the subsequent commond line shows.</p>
+<h3 id="3-automatic-variable">3. automatic variable</h3>
+<blockquote>
+<p>$@</p>
+</blockquote>
+<p>The file name of the target of the rule. If the target is an archive member, then <code>$@</code> is the name of the archive file. In a pattern rule that has multiple targets (see Pattern Rules), <code>$@</code> is the name of whichever target caused the rule’s recipe to be run.</p>
+<blockquote>
+<p>$&lt;</p>
+</blockquote>
+<p>The name of the first prerequisite. If the target got its recipe from an implicit rule, this will be the first prerequisite added by the implicit rule.</p>
+<blockquote>
+<p>$?</p>
+</blockquote>
+<p>The names of all the prerequisites that are newer than the target, with spaces between them. For prerequisites which are archive members, only the named member is used.</p>
+<blockquote>
+<p>$^</p>
+</blockquote>
+<p>The names of all the prerequisites, with spaces between them. For prerequisites which are archive members, only the named member is used. A target has only one prerequisite on each other file it depends on, no matter how many times each file is listed as a prerequisite. So if you list a prerequisite more than once for a target, the value of <code>$^</code> contains just one copy of the name. This list does not contain any of the order-only prerequisites.</p>
+<pre><code>Note that, they only have values within the commond lines.
+</code></pre><h3 id="4-pattern-rules">4. Pattern Rules</h3>
+<pre><code>%.o : %.f90
+    $(FC)  $(FFLAGS) $(MODULE) -c $&lt; -o $@
+</code></pre><p>A pattern rule contains the character <code>%</code> (exactly one of them) in the target; otherwise, it looks exactly like an ordinary rule. The target is a pattern for matching file names; the <code>%</code> matches any nonempty substring, while other characters match only themselves.</p>
+<pre><code>Note that, specfic filename is unavailable in pattern rules, so automatic variables come into being.
+</code></pre><h1 id="tips">Tips</h1>
+<ol>
+<li>Shell commonds is available in makefile
+For example, <code>cd $(RUNPATH); $(EXE)</code> tells the terminal to change pwd temporarily to $(RUNPATH) and execute $(EXE). Note here, the pwd will back to its original path after that.</li>
+<li>Conditional execution is available in makefile
+You can use the included conditional directive <code>ifeq</code> in makefile as follows.
+But i prefer to use <code>if</code> directive of Shell as follows.
+<code>if [ -e '*.mod' ]; then mv *.mod $(MOD); fi</code></li>
+<li>Display variables infomation in makefile
+We can use <code>$(info $(PROG))</code> to display the value of $(PROG).</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/marscfeng-s-gnufor2-module/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

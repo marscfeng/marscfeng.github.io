@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mendeley on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/mendeley/</link>
+    <description>Recent content in mendeley on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Sat, 31 Mar 2018 21:49:29 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/mendeley/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>modify citation style in mendeley</title>
+      <link>http://marscfeng.github.io/post/modify-citation-style-in-mendeley/</link>
+      <pubDate>Sat, 31 Mar 2018 21:49:29 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/modify-citation-style-in-mendeley/</guid>
+      <description>作为文献管理工具，Mendeley可以说深得民心。当然，国内用户可能会对其不稳定的服务器不爽，但是不算是影响生产力的问题。唯一让我崩溃的一件</description>
+    </item>
+    
+  </channel>
+</rss>

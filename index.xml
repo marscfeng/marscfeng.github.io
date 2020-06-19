@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/</link>
+    <description>Recent content on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Fri, 17 May 2019 17:49:40 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fast data transfer/sync using globus</title>
+      <link>http://marscfeng.github.io/post/Fast-data-transfer-sync-using-globus/</link>
+      <pubDate>Fri, 17 May 2019 17:49:40 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Fast-data-transfer-sync-using-globus/</guid>
+      <description>About Globus Globus is a secure, reliable research data management service. It works as a bridge between the remote Endpoint and the local Endpoint, rather than the cloud.
+With Globus, subscribers can move, share, publish &amp;amp; discover data via a single interface – whether your files live on a supercomputer, lab cluster, tape archive, public cloud or your laptop, you can manage this data from anywhere, using your existing identities, via just a web browser.</description>
+    </item>
+    
+    <item>
+      <title>Run Unix executable binary on MATLAB</title>
+      <link>http://marscfeng.github.io/post/Run-Unix-executable-binary-on-MATLAB/</link>
+      <pubDate>Wed, 18 Apr 2018 19:42:53 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Run-Unix-executable-binary-on-MATLAB/</guid>
+      <description>As a MATLAB guy and *nix guy, you may want to fulfill everything on MATLAB, or on command line. I will choose the former one.
+Call SYSTEM command in MATLAB MATLAB has its own bssh PATH, which is different from the *nix PATH. But a workaround consists in modifying the script (/Applications/MATLAB_R*****.app/bin/matlab) that launches MATLAB.
+$ cd /Applications/MATLAB_R*****.app/bin/ $ vi matlab # add the following line after #!/bin/sh $ export PATH:$PATH Then, add this matlab into your ~/.</description>
+    </item>
+    
+    <item>
+      <title>modify citation style in mendeley</title>
+      <link>http://marscfeng.github.io/post/modify-citation-style-in-mendeley/</link>
+      <pubDate>Sat, 31 Mar 2018 21:49:29 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/modify-citation-style-in-mendeley/</guid>
+      <description>作为文献管理工具，Mendeley可以说深得民心。当然，国内用户可能会对其不稳定的服务器不爽，但是不算是影响生产力的问题。唯一让我崩溃的一件</description>
+    </item>
+    
+    <item>
+      <title>Free license for beyond compare MAC/Win/Linux</title>
+      <link>http://marscfeng.github.io/post/Free-license-for-beyond-compare-MAC-Win-Linux/</link>
+      <pubDate>Mon, 26 Feb 2018 20:38:37 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Free-license-for-beyond-compare-MAC-Win-Linux/</guid>
+      <description>Thanks HUQI&amp;rsquo;s share!
+check the lic file &#39;huqi/trial.key&#39; from above link Take MAC for example:  download beyond compare package install replace trial.key under /Applications/Beyond\ Compare.app/Contents/Resources/trial.key with above license save trial.key &amp;amp; restart app  Usage:  install command line tool  e.g., $ bcompare new.f90 old.f90 $ bcompare /Folder1/ /Folder2/ install Beyond Compare plugin on sublime text  Notes:  Refer the comments on huqi&amp;rsquo;s Githu for more info This license works for 4.</description>
+    </item>
+    
+    <item>
+      <title>how to run MPI programs?</title>
+      <link>http://marscfeng.github.io/post/how-to-run-MPI-programs/</link>
+      <pubDate>Sat, 24 Feb 2018 22:42:07 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/how-to-run-MPI-programs/</guid>
+      <description>最近在编译一个老的有限差分的波场模拟程序，基于fortran的mpi程序。说来奇怪，mpi程序并不是每次都能编译成功，多数时候只能用串行方式</description>
+    </item>
+    
+    <item>
+      <title>unblock Neteasemusic for Overseas Chinese </title>
+      <link>http://marscfeng.github.io/post/unblock-Neteasemusic-for-Overseas-Chinese/</link>
+      <pubDate>Tue, 21 Nov 2017 12:21:44 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/unblock-Neteasemusic-for-Overseas-Chinese/</guid>
+      <description>location: USA OS: macOS\iphone\ipad Update: Nov 20, 2017 1. modify hosts for MAC/PC Just like the means to unblock google within the GreatWALL, we could modify the hosts for Neteasemusic by adding the following IP addresses into hosts file. # 网易云音乐数据传输服务器反代 79.137.38.20 music.163.com # 归属地查询服务器反代 79.137.38.20 ip.ws.126.net #</description>
+    </item>
+    
+    <item>
+      <title>About FFT in MATLAB</title>
+      <link>http://marscfeng.github.io/post/About-FFT-in-MATLAB/</link>
+      <pubDate>Fri, 17 Nov 2017 20:55:36 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/About-FFT-in-MATLAB/</guid>
+      <description>fft与fftrl matlab内建的fft正变换结果，前一半是正频率，后一半是负频率；但是Margrave写的fftrl与ifftrl较为人</description>
+    </item>
+    
+    <item>
+      <title>plot China map &amp; inside world map with GMT</title>
+      <link>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</link>
+      <pubDate>Thu, 26 Oct 2017 09:49:09 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/</guid>
+      <description>上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script</description>
+    </item>
+    
+    <item>
+      <title>Feng Cheng</title>
+      <link>http://marscfeng.github.io/about/</link>
+      <pubDate>Sun, 22 Oct 2017 13:51:47 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/about/</guid>
+      <description>FCheng@lbl.gov
+Research I am a postdoctoral of LAWRENCE BERKELEY NATIONAL LABORATORY, working with Jonathan B Ajo-Franklin on Distributed Acoustic Sensing projects.
+Education 09/2009–06/2013: B.Sc. Solid earth geophysics, China University of Geosciences, Wuhan. 09/2013–06/2015: M.Sc. Geophysics, China University of Geosciences, Wuhan
+Advisor: Prof. Jianghai Xia Topic: Near-surface surface wave survey. 06/2015–present: Ph.D. Geophysics, China University of Geosciences, Wuhan
+Advisor: Prof. Jianghai Xia Topic: Passive Surface wave survey in urban area. Fall, 2016: Visiting Study, Department of Geoscience and Engineering, Delft University of Technology,The Netherlands</description>
+    </item>
+    
+    <item>
+      <title>SEGY数据格式</title>
+      <link>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Wed, 21 Oct 2015 08:36:36 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/</guid>
+      <description>SEGY数据结构 SEGY数据结构由文件头和数据体组成。 文件头 总长度为3600字节，分两部分 文件头第一部分长度3200bytes（80byte</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/Btsync%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Btsync%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/</guid>
+      <description>title: Btsync下载与安装 date: 2015-12-20 20:19:50 updated: 2015-12-20 20:19:50 tags: btsync linux categories: Software 1.下载linux平台 Btsync 2. 解压并添加环境变量 # cd /usr/local # sudo mkdir btsync # sudo tar xzf stable -C btsync # sudo rm stable # sudo gedit ~/.bashrc &amp;gt; export PATH=$PATH:/usr/local/btsync</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/edit-formula-in-mac-word/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/edit-formula-in-mac-word/</guid>
+      <description>title: edit formula in mac word date: 2016-10-18 22:14:48 updated: 2016-10-18 22:14:48 tags: mac word latex formula categories: Software 对于windows用户，给word，ppt添加公式可以直接使用mathtype。 如果你喜欢latex的</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/export-high-quality-figure-from-matlab/</guid>
+      <description>title: export high quality figure from matlab date: 2016-10-14 01:15:25 updated: 2016-10-14 01:15:25 tags: matlab figure plot export_fig categories: Programming 对于习惯Matlab的科研工作者而言，用它来绘制高质量、可发表的图片还是非常必要的。不过喜欢pyth</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/</guid>
+      <description>title: fortran 子程序及其封装 date: 2016-09-28 12:20:31 updated: 2016-09-28 12:20:31 tags: fortran module subroutine interface categories: Programming 对于Fortran90/95而言，fortran子程序包括：function，external function</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%93%BE%E6%8E%A5%E5%BA%93/</guid>
+      <description>title: GCC编译过程及链接库 date: 2015-10-21 14:40:18 updated: 2015-10-21 14:40:18 tags: GCC 编译 链接 categories: Programming 编译过程 GCC的编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocess</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/</guid>
+      <description>title: GMT绘制中国地形图 date: 2015-12-30 22:14:33 updated: 2015-12-30 22:14:33 tags: gmt psxy pstext chinamap categories: Geophysics 因为我想把最近三年随同实验室出差的地方、路线一一记录下来，所以我写了这篇博客，目的是记录我用</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/IEEE754%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
+      <description>title: IEEE754学习总结 date: 2015-10-21 08:08:06 tags: IEEE floating categories: Programming 参考&amp;gt;顺水行舟 前言 前不久在分析一个程序的过程中遇到了浮点运算，也就顺便学习了一下浮点数的存放格</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-ifort-on-mac-Sierra/</guid>
+      <description>title: install ifort on mac Sierra date: 2016-11-14 12:15:27 updated: 2016-11-14 12:15:27 tags: ifort osx sierra intel categories: Software 1. About ifort Intel Fortran Compiler, also known as IFORT, is a group of Fortran compilers from Intel for Windows, Linux, and OS X. ifort主要是为intel64处理和i386处理器生</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-macOS-theme-on-ubuntu/</guid>
+      <description>title: install macOS theme on ubuntu date: 2017-01-19 19:56:33 updated: 2017-01-19 19:56:33 tags: ubuntu macOS theme albert categories: Software 鉴于个人一直使用mac，所以对mac的桌面环境更为喜欢。noobslab的一群天才们在ubuntu每一</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-openmpi-on-mac-Sierra/</guid>
+      <description>title: install openmpi on mac Sierra date: 2016-11-14 13:43:26 updated: 2016-11-14 13:43:26 tags: openmpi sierra osx mpi ifort gcc categories: Software 1. About openmpi 要说openmpi，首先要说MPI，mpi不是一门新的语言，可以认为是一个函数库，实际上，他</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/install-QQ-light-deepin-on-ubuntu-16-10/</guid>
+      <description>title: install QQ_light_deepin on ubuntu 16.10 date: 2017-01-09 10:59:34 updated: 2017-01-09 10:59:34 tags:
+ qq_light ubuntu crossover crack categories: Software   when i upgraded my ubunutu from 16.04 to 16.10, i found that i cannot use qq_intel on this platform. It threw out an error indicating that this qq_intel is too old for my QQ account. After some trials, i found qq_light_deepin and it works well on my ubuntu 16.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/java-lang-ExceptionInInitializerError/</guid>
+      <description>title: java.lang.ExceptionInInitializerError date: 2017-01-09 12:46:28 updated: 2017-01-09 12:46:28 tags:
+ error matlab linux java categories: Software   After i complete to install matlab R2016b on ubuntu, i tried to modify the default fonts. I thought i might make some mistakes and when i restarted MATLAB it threw out some error as follows:
+java.lang.ExceptionInInitializerError at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;init&amp;gt;(XCmdWndView.java:353) at com.mathworks.mde.cmdwin.XCmdWndView.&amp;lt;clinit&amp;gt;(XCmdWndView.java:314) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;init&amp;gt;(CmdWin.java:96) at com.mathworks.mde.cmdwin.CmdWin.&amp;lt;clinit&amp;gt;(CmdWin.java:92) at java.lang.Class.forName0(Native Method) at java.lang.Class.forName(Unknown Source) at com.mathworks.jmi.ClassLoaderManager.loadClass(ClassLoaderManager.java:442) at com.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/linux%E4%B8%8B%E9%9D%99%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E6%B7%BB%E5%8A%A0/</guid>
+      <description>title: linux下静动态库的添加 date: 2016-09-29 09:46:04 updated: 2016-09-29 09:46:04 tags: GCC 编译 链接 categories: Programming 静态库 为了在编译程序中正确找到库文件,静态库必须按照 lib[name].a 的规则命名,如下例中[name</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/mac-sierra-upgrad-and-internal-error/</guid>
+      <description>title: mac sierra upgrad and internal error date: 2016-10-16 23:22:17 updated: 2016-10-16 23:22:17 tags: mac error upgrade categories: Software sierra升级，有什么明显变化吗？感觉不出来，除了整个桌面因为sierra而变得昏黄起来，护眼吧。不</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/makefile-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/makefile-%E6%80%BB%E7%BB%93/</guid>
+      <description>title: makefile 总结 date: 2015-10-21 14:28:15 updated: 2015-10-21 14:28:15 tags: makefile C Fortran categories: Programming 常用变量 CFLAGS C编译器的选项，没有定义，可以指定编译头文件路径 LDFLAGS 链接器的选项，没有定义，可以指定链接库文件 LDLIBS 链接</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>title: malloc.h not found on Mac OS X 解决办法 date: 2015-10-21 13:26:36 updated: 2015-10-21 13:26:36 tags: malloc OSX C categories: Programming 修改编译参数 OSX 10.5+以——10.11，MAC把malloc.h放在 /usr/includ</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/</guid>
+      <description>title: &amp;ldquo;marscfeng&amp;rsquo;s gnufor2 module&amp;rdquo; date: 2016-09-30 15:30:35 updated: 2016-09-30 15:30:35 tags: 链接 Fortran gnuplot module categories: Programming gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/my-personal-makefile-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/my-personal-makefile-module/</guid>
+      <description>title: my personal makefile module date: 2016-09-29 12:25:19 updated: 2016-09-29 12:25:19 tags: GCC 编译 链接 makefile categories: Programming module text #--------------------------------------------------------------- # # &amp;lt;&amp;lt; marscfeng&#39;s Makefile template for gcc/gfortran &amp;gt;&amp;gt; # #--------------------------------------------------------------- # Location Flags for default path of libraries, binaries and modules #--------------------------------------------------------------- LIB = /Users/Mars/.Setup/LIBs/ MOD = /Users/Mars/.Setup/MODs/ PROG = /Users/Mars/.Setup/ #-------------------------------------------------------------------- # Compile&amp;amp;Link Flags #-------------------------------------------------------------------- FFLAGS = -O -g -fopenmp FFLAGS += -Wall LDFLAGS =</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/OSX-10-11%E4%B8%8B%E6%90%AD%E5%BB%BAhexogithub%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <description>title: OSX 10.11下搭建hexo＋github静态博客 date: 2015-10-21 16:09:01 updated: 2015-10-21 16:09:01 tags: hexo github OSX mathjax .nitric categories: OSX Hexo？我不懂， 我只知道是个台湾大学生Tommy的牛作。什么</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/Seismic-Un-x-insatll-on-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Seismic-Un-x-insatll-on-ubuntu/</guid>
+      <description>title: &amp;lsquo;Seismic Un*x insatll on ubuntu&amp;rsquo; date: 2015-12-20 20:04:35 updated: 2015-12-20 20:04:35 tags: CWP linux seismic categories: Software 下载 CWP/SU 设定 CWPROOT 环境变量 习惯将软件安装在/usr/local下，因此就在～/.bashrc中添加 CWPROO</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SU%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>title: SU常用命令 date: 2017-04-11 13:54:38 updated: 2017-04-11 13:54:38 tags: seismic unix plot categories: Software sukeyword 查看su关键字 %Usage: sukeyword -o %在终端输出segy.h sukeyword [str] %在终端输出segy.h中所有与[str]匹配的字段</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/SU%E6%95%B0%E6%8D%AE%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</guid>
+      <description>title: SU数据兼容性问题 date: 2017-05-04 09:18:53 updated: 2017-05-04 09:18:53 tags: SU data swap big-endian little-endian categories: Software When we try to open su format data from others computer, the same error always arises: $ surange &amp;lt; 1.su surange: fgettr.c: on trace #2 number of samples in header (58361) differs from number for first trace (53255) It is caused by the compatibility probelm between</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/Terminal-here-on-Mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Terminal-here-on-Mac/</guid>
+      <description>title: Terminal here on Mac date: 2016-10-29 02:37:16 updated: 2016-10-29 02:37:16 tags: Finder terminal directory categories: Software 今天朋友跟我抱怨，mac下面打开终端太麻烦，转换个路径也很折腾。其实我也觉得麻烦，不过之前用xtraFin</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/ubuntu%E6%BA%90/</guid>
+      <description>title: ubuntu源 date: 2017-01-19 19:58:03 updated: 2017-01-19 19:58:03 tags: ubuntu sources cug categories: Software ubuntu用了三四年了，现在才算是知道 ubuntu的源，以及很多公司、高校提供的镜像服务器又是什么</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/use-openmp-for-your-simplified-parallelism/</guid>
+      <description>title: use openmp for your simplified parallelism date: 2016-11-17 00:55:10 updated: 2016-11-17 00:55:10 tags: openmp ifort mpi categories: Programming 这里主要是废话，权且当作是对上一篇博文的补充。 多数情况下，MPI并不是最好的选择，这两天的测试让我深有</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/virtualbox-deploy-win7-in-ubuntu/</guid>
+      <description>title: virtualbox deploy win7 in ubuntu date: 2015-12-20 20:12:39 updated: 2015-12-20 20:12:39 tags: linux virtual box win7 usb2.0 categories: Software 下载Virtualbox，并安装 选择安装系统，win7_64bit 注意修改 bios 之后要关闭电源一下！重启</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/%E5%8D%81%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/%E5%8D%81%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/</guid>
+      <description>title: 十进制小数转二进制 date: 2015-10-20 22:07:29 tags: 二进制 floating categories: Programming 参考&amp;gt;upzone 十进制小数→二进制小数 方法：“乘2取整” 对十进制小数乘2得到的整数部分和小数</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/%E5%B0%86%E8%B4%9F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/%E5%B0%86%E8%B4%9F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6/</guid>
+      <description>title: 将负数转换为二进制 date: 2015-10-20 16:56:20 tags: 二进制 categories: Programming 参考&amp;gt;onewalkingman 5在计算机中如何表示 比如，假设有一 int 类型的数，值为5，那么，我们</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E7%A7%91%E7%A0%94Tools/</guid>
+      <description>title: 谈谈我的科研Tools date: 2015-10-23 16:03:37 updated: 2015-10-23 16:03:37 tags: markdown latex BtSync VPN mendeley categories: Software 多PC同步 云盘 坚果云，多平台 百度云同步盘 for windows BTSync Fast, simple, and secure file syncing for IT and individuals. 一个简单的文件传输工具</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://marscfeng.github.io/post/%E8%BD%AC%E8%BD%BD%E6%9C%89%E5%85%B3J-1%E7%AD%BE%E8%AF%81%E4%B8%A4%E5%B9%B4%E5%9B%9E%E5%9B%BD%E6%9C%8D%E5%BD%B9%E6%94%BF%E7%AD%96%E7%9A%84%E8%BE%9F%E8%B0%A3%E6%80%A7%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/%E8%BD%AC%E8%BD%BD%E6%9C%89%E5%85%B3J-1%E7%AD%BE%E8%AF%81%E4%B8%A4%E5%B9%B4%E5%9B%9E%E5%9B%BD%E6%9C%8D%E5%BD%B9%E6%94%BF%E7%AD%96%E7%9A%84%E8%BE%9F%E8%B0%A3%E6%80%A7%E6%80%BB%E7%BB%93/</guid>
+      <description>title: 转载:有关J-1签证“两年”回国服役政策的辟谣性总结 date: 2017-06-16 23:21:05 updated: 2017-06-16 23:21:05 tags: VISA J1 categories: NOTE 先解释一下本人情况： 本人于2016年9-12月在美国某高校以J-</description>
+    </item>
+    
+  </channel>
+</rss>

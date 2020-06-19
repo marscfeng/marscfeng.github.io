@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>plot China map &amp; inside world map with GMT - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="plot China map &amp; inside world map with GMT" />
+<meta property="og:description" content="上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/plot-China-map-inside-world-map-with-GMT/" />
+<meta property="article:published_time" content="2017-10-26T09:49:09+00:00" />
+<meta property="article:modified_time" content="2017-10-26T09:49:09+00:00" />
+<meta itemprop="name" content="plot China map &amp; inside world map with GMT">
+<meta itemprop="description" content="上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script">
+<meta itemprop="datePublished" content="2017-10-26T09:49:09&#43;00:00" />
+<meta itemprop="dateModified" content="2017-10-26T09:49:09&#43;00:00" />
+<meta itemprop="wordCount" content="1833">
+
+
+
+<meta itemprop="keywords" content="gmt,psxy,pstext,chinamap,inside map," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="plot China map &amp; inside world map with GMT"/>
+<meta name="twitter:description" content="上面有篇博文已经介绍了绘制中国地图的方法,这里主要介绍一下用GMT绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。 OS Mac OSX 10.11.2 GMT version GMT 5.4.2 Script"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">plot China map &amp; inside world map with GMT</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-10-26 </span>
+        <div class="post-category">
+            <a href="/categories/Geophysics/"> Geophysics </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#数据准备">数据准备</a>
+      <ul>
+        <li><a href="#全球地形起伏数据httpseismaninfoglobal-relief-modelshtml"><a href="http://seisman.info/global-relief-models.html">全球地形起伏数据</a></a></li>
+        <li><a href="#网格数据重采样">网格数据重采样</a></li>
+      </ul>
+    </li>
+    <li><a href="#绘制图中图">绘制图中图</a></li>
+    <li><a href="#绘制台站">绘制台站</a></li>
+    <li><a href="#添加台站名">添加台站名</a></li>
+    <li><a href="#添加gmt-logo及图名">添加GMT logo及图名</a></li>
+    <li><a href="#ps转jpg">PS转JPG</a></li>
+    <li><a href="#reference及推荐阅读">Reference及推荐阅读</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>上面有篇博文已经介绍了<a href="http://marscfeng.github.io/2015/12/30/GMT%E7%BB%98%E5%88%B6%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%BD%A2%E5%9B%BE/">绘制中国地图</a>的方法,这里主要介绍一下用<a href="http://gmt.soest.hawaii.edu/">GMT</a>绘制一张嵌入世界地图的中国地图解决方法。权当做笔记整理。</p>
+<ul>
+<li>OS
+<strong>Mac OSX 10.11.2</strong></li>
+<li>GMT version
+<strong>GMT 5.4.2</strong></li>
+<li>Script language
+<strong>bash</strong></li>
+</ul>
+<h2 id="数据准备">数据准备</h2>
+<h3 id="全球地形起伏数据httpseismaninfoglobal-relief-modelshtml"><a href="http://seisman.info/global-relief-models.html">全球地形起伏数据</a></h3>
+<p>鉴于绘制的世界地图只是作为嵌入图，因此数据分辨率不需要太高，这里选择<a href="http://topex.ucsd.edu/WWW_html/srtm30_plus.html">SRTM30</a>高程数据。
+直接<a href="ftp://topex.ucsd.edu/pub/srtm30_plus/topo30/topo30.grd">下载</a>netCDF格式的网格数据(约1.7G)，该网格数据可直接用GMT进行成图。</p>
+<h3 id="网格数据重采样">网格数据重采样</h3>
+<p>GMT提供了<code>grdsample</code>命令进行网格数据重采样，可以进行数据加密，也可以进行数据降采。前面提过这里的世界地图不需要太高的分辨率，因此将原始30&rsquo;'(约1km)的数据降采10km的网格数据进行全球地图成图，降采到2km的网格数据进行中国地图成图。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># -I选项确定重采样空间步长</span>
+<span class="c1"># -R选项确定新网格数据分布，这里不想把欧洲分开，因此没用0-360</span>
+gmt grdsample -R-25/335/-60/60 -I10k topo30.grd -Gtopo_10k.grd
+gmt grdsample -R70/135/15/55 -I2km topo30.grd -GChina_Topo.grd
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="绘制图中图">绘制图中图</h2>
+<p>绘制中国地形图，外加世界地图作为图中图嵌入在地图左下角。绘图要点：</p>
+<ul>
+<li>中国地形图</li>
+<li>海岸线及行政区划</li>
+<li>世界地图图中图</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#---------Initial Standard Options</span>
+<span class="c1"># OPTIONS FOR CHINA MAP</span>
+<span class="nv">J1</span><span class="o">=</span>X6id/4id
+<span class="nv">R1</span><span class="o">=</span>70/135/15/55
+<span class="nv">B1</span><span class="o">=</span>15/10WSEN 
+<span class="c1"># OPTIONS FOR INSIDE MAP</span>
+<span class="nv">J2</span><span class="o">=</span>X2.8id/1.5id
+<span class="nv">R2</span><span class="o">=</span>-25/335/-60/60
+<span class="nv">B2</span><span class="o">=</span><span class="m">0</span>
+#
+<span class="nv">PS</span><span class="o">=</span>map_topo-1.ps
+<span class="nv">input1</span><span class="o">=</span>China_topo.grd
+<span class="nv">input2</span><span class="o">=</span>topo_10k.grd
+<span class="c1">#---------DATA PREPARE</span>
+<span class="c1"># gmt grdsample -R$R1 -I2km topo30.grd -G$input1</span>
+<span class="c1"># gmt grdsample -R$R2 -I10k topo30.grd -G$input2</span>
+
+<span class="c1">#---------OPEN GMT</span>
+gmt psxy -R<span class="nv">$R1</span> -J<span class="nv">$J1</span> -T -K &gt; <span class="nv">$PS</span>
+
+<span class="c1">#---------Plot China Map</span>
+<span class="c1"># 计算梯度文件，便于后面成图。</span>
+gmt grdgradient <span class="nv">$input1</span> -Gintense.grd -A0/270 -Nt1.0 -V
+<span class="c1"># 制作cpt文件。</span>
+gmt makecpt -Cglobe -T-10000/10000/100 -Z -V &gt;pstopo.cpt
+<span class="c1"># grd文件成图。</span>
+gmt grdimage -J<span class="nv">$J1</span> -X4.5 -Y5.5 <span class="nv">$input1</span> -Iintense.grd  -Cpstopo.cpt -O -K -V &gt;&gt;<span class="nv">$PS</span>
+<span class="c1"># 绘制海岸线，国界边界数据。</span>
+gmt pscoast -R<span class="nv">$R1</span> -J<span class="nv">$J1</span> -B1<span class="nv">$B1</span> -O -K -Dh -A300  -N1/0.01p -P &gt;&gt;<span class="nv">$PS</span>
+
+<span class="c1">#---------Plot Inside Map</span>
+gmt grdgradient <span class="nv">$input2</span> -Gintense.grd -A0/270 -Nt1.0 -V
+gmt grdimage -J<span class="nv">$J2</span> <span class="nv">$input2</span> -Iintense.grd  -Cpstopo.cpt -O -K -V &gt;&gt;<span class="nv">$PS</span>
+<span class="c1"># 基于绘制海岸线，国界边界数据。</span>
+gmt pscoast -R<span class="nv">$R2</span> -J<span class="nv">$J2</span> -B<span class="nv">$B2</span> -O -K -Dh -A300 -N1/0.01p -P --MAP_FRAME_TYPE<span class="o">=</span>plain &gt;&gt;<span class="nv">$PS</span>
+gmt pscoast -R<span class="nv">$R2</span> -J<span class="nv">$J2</span> -B<span class="nv">$B2</span> -Df -N1 -W -A5000 -K -O --MAP_FRAME_TYPE<span class="o">=</span>plain &gt;&gt; <span class="nv">$PS</span>
+<span class="c1"># 利用 psbasemap 在大区域地图内绘制小区域所在的方框</span>
+gmt psbasemap -R<span class="nv">$R2</span> -J<span class="nv">$J2</span> -D<span class="nv">$R1</span> -F+p2p,black -K -O --MAP_FRAME_TYPE<span class="o">=</span>plain &gt;&gt; <span class="nv">$PS</span>
+<span class="c1">#---------Plot STATIONS</span>
+
+<span class="c1">#---------CLOSE GMT</span>
+gmt psxy -R<span class="nv">$R</span> -J<span class="nv">$J</span> -T -O &gt;&gt; <span class="nv">$PS</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>绘制效果如下：
+<img src="https://farm5.staticflickr.com/4488/37907777692_126dbfa645_b.jpg" alt="psMAP-1"></p>
+<p>这里说明以下几点：</p>
+<ol>
+<li>B1，这里仍然用gmt4的语法，不过gmt5仍然兼容</li>
+<li>注意养成良好的习惯，GMT开关。</li>
+<li>制作cpt文件时，<code>-T-10000/10000/100</code>控制色标棒上下界值</li>
+<li>生成中国地形图时,<code>-X4.5 -Y5.5</code>控制图片位置，方便后续修改色标棒位置或者gmt logo</li>
+<li>绘制<code>inside map</code>时，语句上没有什么变化，紧紧是控制不同的标准选项而已</li>
+<li><code>inside map</code>默认绘制到左小角，也可以通过<code>-X -Y</code>选项来手动修改</li>
+<li><code>--MAP_FRAME_TYPE</code>放在句中为局部变量，并不会更改其他语句中的环境设置</li>
+</ol>
+<h2 id="绘制台站">绘制台站</h2>
+<p>绘制台站标识主要使用<code>PSXY</code>，通过更改不同<code>option</code>来设置不同的标识符。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#---------Plot STATIONS</span>
+awk <span class="s1">&#39;{print $1, $2}&#39;</span> psStation.txt <span class="p">|</span> gmt psxy -J<span class="nv">$J1</span> -R<span class="nv">$R1</span> -B<span class="nv">$B1</span> -Sc0.15c -W1p,black -Glightgray -K -O &gt;&gt; <span class="nv">$PS</span> 
+awk <span class="s1">&#39;{print $1, $2}&#39;</span> psOUT.txt <span class="p">|</span> gmt psxy -J<span class="nv">$J2</span> -R<span class="nv">$R2</span> -B<span class="nv">$B2</span> -St0.2c -W1p,black -Gred -K -O --MAP_FRAME_TYPE<span class="o">=</span>plain &gt;&gt; <span class="nv">$PS</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>绘制效果如下：
+<img src="https://farm5.staticflickr.com/4481/37229955024_d038f88777_b.jpg" alt="psMAP-2"></p>
+<p>这里需要注意：</p>
+<ol>
+<li>绘制嵌入图中的台站标识时与绘制图中图一样，采用相应的<code>STANDARD OPTIONS</code>即可相应控制。</li>
+<li><code>psxy</code>的输入为<code>[X Y]</code>坐标矢量，可以通过<code>awk</code>从台站列表文件中拾取，<code>$1 $2</code>分别表示第一列和第二列，注意两列之间的分隔符<code>,</code>(让第一列和第二列分隔打印出来)。</li>
+<li><code>-S</code>选项控制标识符，<code>c</code>表示圆圈，<code>t</code>表示三角形,<code>0.15c</code>表示半径大小。</li>
+<li><code>-W</code>选项控制字体大小或者曲线粗细及颜色。</li>
+<li><code>-G</code>选项控制填充颜色</li>
+</ol>
+<h2 id="添加台站名">添加台站名</h2>
+<p>添加台站名使用<code>PSTEXT</code>,如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#---------Plot STATIONS NAME</span>
+gmt pstext -R<span class="nv">$R1</span> -J<span class="nv">$J1</span> -B<span class="nv">$B1</span> -K -O -N  -F+f10p,2,black &gt;&gt; <span class="nv">$PS</span> <span class="s">&lt;&lt; EOF
+</span><span class="s">125  31.14  Shanghai  
+</span><span class="s">109 31.4   Enshi 
+</span><span class="s">120.17 36.9   Qingdao  
+</span><span class="s">113.7  31.40  Wuhan  
+</span><span class="s">114   35.50  Zhengzhou  
+</span><span class="s">84.51   46.20  Karamary 
+</span><span class="s">93.28   41.7   Hami 
+</span><span class="s">87.36   44.29  Urumqi   
+</span><span class="s">116.6  40.4  BeiJing  
+</span><span class="s">103.51  36.99  Lanzhou  
+</span><span class="s">108.57  34.7  Xi&#39;an  
+</span><span class="s">103.79  25.30   Kunming 
+</span><span class="s">114  38.0  Zhuozhou  
+</span><span class="s">93.03 44.60  Balikun  
+</span><span class="s">121 29  Hangzhou 
+</span><span class="s">119 31.31  Suzhou 
+</span><span class="s">121.8 32.8  Nantong  
+</span><span class="s">113 27 Changsha  
+</span><span class="s">110.7 29.0 Yueyang 
+</span><span class="s">122 39.9 Dalian  
+</span><span class="s">EOF</span>
+gmt pstext -R<span class="nv">$R2</span> -J<span class="nv">$J2</span> -B<span class="nv">$B2</span> -K -O -N --MAP_FRAME_TYPE<span class="o">=</span>plain -F+f8p,blue+jBL -Glightgray &gt;&gt; <span class="nv">$PS</span> <span class="s">&lt;&lt; EOF
+</span><span class="s">3  36   Delft 
+</span><span class="s">3  28  Cologne 
+</span><span class="s">3  20  Karlsruhe
+</span><span class="s">EOF</span>
+gmt pstext -R<span class="nv">$R2</span> -J<span class="nv">$J2</span> -B<span class="nv">$B2</span> -K -O -N --MAP_FRAME_TYPE<span class="o">=</span>plain -F+f8p,red+jBL -Glightgray &gt;&gt; <span class="nv">$PS</span> <span class="s">&lt;&lt; EOF
+</span><span class="s">-160  16  SanFranciso 
+</span><span class="s">-160  8     Boise
+</span><span class="s">-160  0    Denver
+</span><span class="s">-160  -8 Oklahoma  
+</span><span class="s">-160  -16   New Orleans   
+</span><span class="s">-160  -24 Princeton
+</span><span class="s">EOF</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这里需要注意：</p>
+<ol>
+<li>没有使用<code>awk</code>直接从列表导入，是因为想手动修改台站名的相应位置，因为部分台站相距太近。当然我们也可以使用<code>awk '{print $1+1.3, $2+0.2}, $3' psStation.txt |</code>来批量修改。</li>
+<li><code>-F</code>选项控制添加文本属性，<code>-f</code>控制字体，<code>8p</code>表示字号，<code>red</code>控制颜色，<code>j</code>控制文本排版对齐方式，可参考<a href="http://docs.gmt-china.org/basic/text.html">文本属性</a>。</li>
+</ol>
+<h2 id="添加gmt-logo及图名">添加GMT logo及图名</h2>
+<p>这里仍然使用<code>PSTEXT</code>，用法与上文一致。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gmt pstext -R<span class="nv">$R1</span> -J<span class="nv">$J1</span> -B<span class="nv">$B1</span> -K -O -N  -F+f20p,28,red -UBR/13.8C/0.1C/<span class="s1">&#39;F. Cheng&#39;</span> &gt;&gt; <span class="nv">$PS</span> <span class="s">&lt;&lt; EOF
+</span><span class="s">105 53 Where have we been?
+</span><span class="s">EOF</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这里需要注意：</p>
+<ol>
+<li><code>-U</code>控制GMT时间戳，<code>BR</code>表示右下角对齐，<code>/13.8c/0.1c</code>控制相应位置，具体参考<a href="http://docs.gmt-china.org/option/U.html">U属性</a>。</li>
+<li><code>-F</code>选项中多了个<code>28</code>，表示GMT内置28号字体，可参考<a href="http://docs.gmt-china.org/basic/text.html">文本属性</a>。</li>
+</ol>
+<h2 id="ps转jpg">PS转JPG</h2>
+<p>可以使用<code>psconvert</code>命令进行图像转换，亦可参考<a href="http://seisman.info/imagemagick-convert.html">Seisman博客图片转换</a>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#---------CLOSE GMT</span>
+gmt psxy -R<span class="nv">$R</span> -J<span class="nv">$J</span> -T -O &gt;&gt; <span class="nv">$PS</span>
+<span class="c1">#---------PS2JPG</span>
+gmt psconvert -A -E300 -P <span class="nv">$PS</span> -TG
+</code></pre></td></tr></table>
+</div>
+</div><p>最终绘制效果如下：
+<img src="https://farm5.staticflickr.com/4487/24088562738_611945fca6_b.jpg" alt="psMAP-3"></p>
+<h2 id="reference及推荐阅读">Reference及推荐阅读</h2>
+<ul>
+<li><a href="http://docs.gmt-china.org/options.html">GMT参考手册</a></li>
+<li><a href="http://gmt.soest.hawaii.edu/doc/latest/GMT_Docs.html#wpen-attrib">GMT Doc</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_c260b8350101e9d8.html">GMT常用参数</a></li>
+<li><a href="http://gmt.soest.hawaii.edu/doc/latest/pstext.html">PSTEXT doc</a></li>
+<li><a href="https://www.dropbox.com/s/7b9qmv5zeq7chao/psWorld.sh?dl=0">本文绘图脚本</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2017-10-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/gmt/">gmt</a>
+          <a href="/tags/psxy/">psxy</a>
+          <a href="/tags/pstext/">pstext</a>
+          <a href="/tags/chinamap/">chinamap</a>
+          <a href="/tags/inside-map/">inside map</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/About-FFT-in-MATLAB/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">About FFT in MATLAB</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/SEGY%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/">
+            <span class="next-text nav-default">SEGY数据格式</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

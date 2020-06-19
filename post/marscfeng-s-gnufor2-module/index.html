@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - F. Cheng&#39;s Talk</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="F. Cheng" /><meta name="description" content="title: &amp;ldquo;marscfeng&amp;rsquo;s gnufor2 module&amp;rdquo; date: 2016-09-30 15:30:35 updated: 2016-09-30 15:30:35 tags: 链接 Fortran gnuplot module categories: Programming gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛" /><meta name="keywords" content="Geophysics, Seismic, Unix" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: &ldquo;marscfeng&rsquo;s gnufor2 module&rdquo; date: 2016-09-30 15:30:35 updated: 2016-09-30 15:30:35 tags: 链接 Fortran gnuplot module categories: Programming gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://marscfeng.github.io/post/marscfeng-s-gnufor2-module/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: &ldquo;marscfeng&rsquo;s gnufor2 module&rdquo; date: 2016-09-30 15:30:35 updated: 2016-09-30 15:30:35 tags: 链接 Fortran gnuplot module categories: Programming gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛">
+
+<meta itemprop="wordCount" content="2094">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: &ldquo;marscfeng&rsquo;s gnufor2 module&rdquo; date: 2016-09-30 15:30:35 updated: 2016-09-30 15:30:35 tags: 链接 Fortran gnuplot module categories: Programming gnufor2 是一个比较有意思的F90模块，支持命令行模式下接入gnuplot进行绘图。gnufor2本身其实并不牛"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">F. Cheng&#39;s Talk</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#修改后函数库">修改后函数库</a></li>
+    <li><a href="#绘制一维曲线">绘制一维曲线</a>
+      <ul>
+        <li><a href="#1-如何设置输出图片格式">1. 如何设置输出图片格式</a></li>
+        <li><a href="#2-如何定义曲线风格">2. 如何定义曲线风格</a></li>
+        <li><a href="#3-如何定义曲线宽度">3. 如何定义曲线宽度</a></li>
+        <li><a href="#4-如何定义曲线颜色">4. 如何定义曲线颜色</a></li>
+        <li><a href="#5-如何输出图片">5. 如何输出图片</a></li>
+        <li><a href="#6-如何绘制极坐标图">6. 如何绘制极坐标图</a></li>
+        <li><a href="#7-如何在程序运行过程中显示图片">7. 如何在程序运行过程中显示图片</a></li>
+        <li><a href="#8-如何自己用gnuplot绘制相同的图片">8. 如何自己用gnuplot绘制相同的图片</a></li>
+        <li><a href="#9-如何让程序结束后图片窗口继续显示">9. 如何让程序结束后图片窗口继续显示</a></li>
+      </ul>
+    </li>
+    <li><a href="#绘制二维平面图">绘制二维平面图</a>
+      <ul>
+        <li><a href="#1-如何更改image的调色板">1. 如何更改image的调色板</a></li>
+        <li><a href="#2-如何调用新的调色文件">2. 如何调用新的调色文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#module的调用">module的调用</a></li>
+    <li><a href="#download">download</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: &ldquo;marscfeng&rsquo;s gnufor2 module&rdquo;
+date: 2016-09-30 15:30:35
+updated: 2016-09-30 15:30:35
+tags:</p>
+<ul>
+<li>链接</li>
+<li>Fortran</li>
+<li>gnuplot</li>
+<li>module
+categories:</li>
+<li>Programming</li>
+</ul>
+<hr>
+<p><a href="http://www.math.yorku.ca/~akuznets/gnufor2/">gnufor2</a> 是一个比较有意思的<em>F90</em>模块，支持命令行模式下接入<a href="http://www.gnuplot.info/">gnuplot</a>进行绘图。<em>gnufor2</em>本身其实并不牛逼，只不过是写好一个<em>gnuplot</em>可读的文本文件<em>commond_file.txt</em>，文件中包含绘图设置、绘图命令、绘图数据，然后在<em>fortran</em>中用<code>system</code>函数调用<code>gnuplot</code>命令进行绘图。
+换句话说，你可以直接在终端中<code>&gt;&gt; gnuplot commond_line.txt</code>得到相同的结果。
+因此，想要用好<em>gunfor2</em>最好先预习一下<em>gnuplot</em>。作为一款开源软件，<em>gnuplot</em>几乎可以完全实现其他几个常用科学绘图工具的功能，如<a href="https://nl.mathworks.com/products/matlab/">Matlab</a>,<a href="http://gmt.soest.hawaii.edu/">GMT</a>,<a href="http://matplotlib.org/">Matplotlib</a>等。其功能之纷繁、画图之精美也需要你的研读、学习、测试。</p>
+<h2 id="修改后函数库">修改后函数库</h2>
+<pre><code>! 
+! modified by F. Cheng, Sep 30, 2016
+!   v.01 change real*8 data to real*4 data
+!        add xlable,ylable,xyrange setting
+!        add '.eps' and '.emf' format output
+!        add colorbox default for image
+!        add 'jetmap' and 'moreland' palette for geophycist
+! 
+    subroutine plot_1(x1,y1,style,pause,color1,terminal,filename,polar,persist,input,&amp;
+                    linewidth,xlable,ylable,xyrange)
+!***********************************************************************************
+! this subroutine plots 1 2D graph
+! x1,y1 real*4 N
+    subroutine plot_2(x1,y1,x2,y2,style,pause,color1,color2,terminal,filename,polar,&amp;
+                    persist,input,linewidth,xlable,ylable,xyrange)
+!***********************************************************************************
+! this subroutine plots 2 2D graphs in the same coordinate system
+! x1,y1,x2,y2 real*4 N
+    subroutine plot_3(x1,y1,x2,y2,x3,y3,style,pause,color1,color2,color3,terminal,&amp;
+                    filename,polar,persist,input,linewidth,xlable,ylable,xyrange)
+!***********************************************************************************
+! this subroutine plots 3 2D graphs in the same coordinate system
+! x1,y1,x2,y2,x3,y3 real*4 N
+    subroutine plot_4(x1,y1,x2,y2,x3,y3,x4,y4,style,pause,color1,color2,color3,color4,&amp;
+                    terminal,filename,polar,persist,input,linewidth,xlable,ylable,xyrange)
+!***********************************************************************************
+! this subroutine plots 4 2D graphs in the same coordinate system
+! x1,y1,x2,y2,x3,y3,x4,y4 real*4 N
+    subroutine surf_1(xyz,pause,palette,terminal,filename,pm3d,contour,persist,input)
+!***********************************************************************************
+! this is the most general subroutine for generating 3D plots.
+! The data is contained in a 3D array xyz(:,:,:)
+! xyz real*4 3*nx*ny
+    subroutine surf_2(z,pause,palette,terminal,filename,pm3d,contour,persist,input)
+!***********************************************************************************
+! this subroutine plots a 3D surface. The only input is a 2D array z(:,:), the x-y grid 
+! is generated automatically
+! z real*4 nx*ny
+    subroutine surf_3(x,y,z,pause,palette,terminal,filename,pm3d,contour,persist,input)
+!***********************************************************************************
+! this subroutine plots a 3D surface. x and y are 1D arrays needed to generate the x-y grid
+! z(:,:) is a 2D array
+! z real*4 3*nx*ny
+! x real*4 nx
+! y real*4 ny
+    subroutine hist(x,n,pause,color,terminal,filename,persist,input)
+!***********************************************************************************
+! this subroutine plots the histogram of data contained in 1D array x, using n bins as step
+    subroutine plot3d(x,y,z,pause,color,terminal,filename,persist,input,linewidth)
+!***********************************************************************************
+! this subroutine plots 3D curve, given by three 1D arrays x,y,z
+    subroutine image_1(gray,pause,palette,terminal,filename,persist,input)
+!***********************************************************************************
+! this is the most general subroutine for generating 2D surface.
+! The data is contained in a 2D array gray(:,:) 
+! gray real*4 N*M
+    subroutine image_2(x,y,gray,pause,palette,terminal,filename,persist,input,xlable,ylable,xyrange)
+!***********************************************************************************
+! Generating 2D surface 
+! gray real*4 N*M
+! x    real*4 N
+! y    real*4 M
+    subroutine image_3(rgb,pause,terminal,filename,persist,input)
+!***********************************************************************************
+! Generating 2D surface with corresponding RGB value.
+! rgb real*4 N*M 
+! 0&lt;rgb&lt;255
+    subroutine image_4(x,y,rgb,pause,terminal,filename,persist,input,xlable,ylable,xyrange)
+!***********************************************************************************
+! Generating 2D surface with corresponding RGB value
+! rgb  real*4  3*N*M
+! x    real*4  N
+! y    real*4  M
+! 0&lt;rgb&lt;255
+</code></pre><h2 id="绘制一维曲线">绘制一维曲线</h2>
+<pre><code>call plot(x1,y1,style='22-',terminal='ps',filename='fig1.ps')
+</code></pre><p>绘图效果如下：</p>
+<p><img src="http://ww4.sinaimg.cn/large/bf373a14gw1f8bv9g5aj8j20k00e0q4q.jpg" alt=""></p>
+<blockquote>
+<ul>
+<li>ps格式图片可以放在Latex中，本博客网页中使用的是转换后的png格式图片</li>
+</ul>
+</blockquote>
+<h3 id="1-如何设置输出图片格式">1. 如何设置输出图片格式</h3>
+<p>定义<code>terminal</code>参数，模块支持&rsquo;eps&rsquo;，&lsquo;ps&rsquo;，&lsquo;emf&rsquo;，其他格式将在默认&rsquo;wxt&rsquo;模式下以&rsquo;png&rsquo;形式输出。</p>
+<h3 id="2-如何定义曲线风格">2. 如何定义曲线风格</h3>
+<p>定义<code>style</code>参数，模块支持‘实线’，‘点－实线’，‘点线’三种格式绘制曲线，默认情况下以&rsquo;实线&rsquo;型输出。
+绘制单条曲线时，<code>style</code>是个3字符的字符串变量，前两个字符（包括数字或者空格）定义<code>点</code>大小，第三个字符如果是&rsquo;-&lsquo;则定义为&rsquo;点－实线&rsquo;风格，否则只要<code>style</code>变量存在即为‘点线’。
+绘制多条曲线，成倍增加<code>style</code>长度。</p>
+<h3 id="3-如何定义曲线宽度">3. 如何定义曲线宽度</h3>
+<p>定义<code>linewidth</code>参数，默认是1</p>
+<h3 id="4-如何定义曲线颜色">4. 如何定义曲线颜色</h3>
+<p>定义<code>color1</code>等4个参数，默认是蓝、绿、红、橙。</p>
+<h3 id="5-如何输出图片">5. 如何输出图片</h3>
+<p>定义<code>filename</code>参数，即为输出图片名称。默认情况不输出图片，但是在定义<code>terminal</code>而没有定义<code>filename</code>的情况下，将会以当前日期作为文件名输出<em>无后缀</em>图片，其图片格式即为<code>terminal</code>所定义的格式。</p>
+<h3 id="6-如何绘制极坐标图">6. 如何绘制极坐标图</h3>
+<p>定义<code>polar</code>参数，默认为直角坐标绘图，即<code>polar='no'</code>。</p>
+<h3 id="7-如何在程序运行过程中显示图片">7. 如何在程序运行过程中显示图片</h3>
+<p>定义<code>pause</code>参数，默认情况<code>pause＝0</code>，即图片不显示。当<code>pause＝n</code>且大于0时，暂停n秒；当<code>pause=n</code>且小于0时，程序暂停开始显示图片直到在终端输入<code>enter</code>。</p>
+<h3 id="8-如何自己用gnuplot绘制相同的图片">8. 如何自己用gnuplot绘制相同的图片</h3>
+<p>默认情况下，模块每绘制一张图会生成一个<code>commond_file.txt</code>和<code>data_file.txt</code>（后者会覆盖前者）。在终端可以通过<code>$ gnuplot commond_file.txt</code>重复模块中相应的操作，而且还可以通过更改<code>commond_file.txt</code>中的相应操作让图片绘制的更精美。当绘制多张图片想保存相应命令和数据文件时，可以通过<code>input</code>参数设定输出文件名<code>commond_file_input.txt</code>和<code>data_file_input.txt</code>。</p>
+<h3 id="9-如何让程序结束后图片窗口继续显示">9. 如何让程序结束后图片窗口继续显示</h3>
+<p>定义<code>persist</code>，默认图片不会持续存在，即<code>persist='yes'</code>。</p>
+<h2 id="绘制二维平面图">绘制二维平面图</h2>
+<pre><code>call image(f,v,fv,terminal='eps',filename='fig2.eps')
+</code></pre><p><img src="http://ww4.sinaimg.cn/large/bf373a14gw1f8bx8qevgoj20k00e0q4v.jpg" alt=""></p>
+<h3 id="1-如何更改image的调色板">1. 如何更改image的调色板</h3>
+<p>定义<code>palette</code>参数，默认<code>CMY</code>模式。但是包括<code>gnuplot</code>包涵的几种调色板在内，我个人都不喜欢。作为一名地球物理的学生，我推荐两款调色板
+<code>moreland.plt</code>和<code>jetmap.plt</code>，前者是<a href="http://www.kennethmoreland.com/">Kenneth Moreland</a>给出的调色文件,做天然地震的应该很熟悉这个调色板。后者是我根据Matlab的colormap中<a href="http://matlab.izmiran.ru/help/techdoc/ref/colormap.html">jet</a>模式写的相应的RGB调色文件。
+两者绘图效果如下：
+<img src="http://ww2.sinaimg.cn/large/bf373a14gw1f8bx7mih0uj20k00e0dhl.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/bf373a14gw1f8bv9u5f8cj20k00e0jtr.jpg" alt=""></p>
+<h3 id="2-如何调用新的调色文件">2. 如何调用新的调色文件</h3>
+<p>我给<code>palette</code>变量添加了<code>loadj</code>和<code>loadm</code>两个选项。通过定义<code>palette='loadj'</code>，则执行<code>load &quot;jetmap.plt&quot; </code>；通过定义<code>palette='loadm'</code>，则执行<code>load &quot;moreland.plt&quot; </code>。前提是这两个调色文件在你的当前路径或者在<code>gnuplot</code>的<code>LOADPATH</code>中。</p>
+<h2 id="module的调用">module的调用</h2>
+<p>关于module的编译、链接调用，请参看<a href="http://marscfeng.github.io/2016/09/29/my-personal-makefile-module/">my personal makefile module</a>和<a href="http://marscfeng.github.io/2016/09/28/fortran%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/">fortran 子程序及其封装</a>。</p>
+<h2 id="download">download</h2>
+<ol>
+<li><a href="https://www.dropbox.com/s/m7rr25g2zwuytxc/%5BPhilipp_K._Janert%5D_Gnuplot_in_Action_Understandi%28BookFi%29.pdf?dl=0">《Gnuplot in Action 2》</a></li>
+<li><a href="https://www.dropbox.com/s/yodl1wd2t28d6bn/gplot_v4.2.tar.gz?dl=0">gplot_v4.2.tar.gz</a></li>
+<li><a href="https://www.dropbox.com/s/wo3ko3b9xeq2onb/gnufor2_marscfeng.f90?dl=0">gnufor2_marscfeng.f90</a></li>
+<li><a href="https://www.dropbox.com/s/cofy8ym0l8wqdkt/moreland.plt?dl=0">moreland.plt</a></li>
+<li><a href="https://www.dropbox.com/s/srtxngq4ztgu055/jetmap.plt?dl=0">jetmap.plt</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">F. Cheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023584011_23d470443d.jpg">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://live.staticflickr.com/65535/50023570891_5f602af7ea.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/malloc-h-not-found-on-Mac-OS-X-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/my-personal-makefile-module/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:marscfeng@rice.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/marscfeng" class="iconfont icon-github" title="github"></a>
+  <a href="http://marscfeng.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">&copy; 2020 F. Cheng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

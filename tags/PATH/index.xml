@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PATH on F. Cheng&#39;s Talk</title>
+    <link>http://marscfeng.github.io/tags/PATH/</link>
+    <description>Recent content in PATH on F. Cheng&#39;s Talk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2020 F. Cheng</copyright>
+    <lastBuildDate>Wed, 18 Apr 2018 19:42:53 +0000</lastBuildDate>
+    
+	<atom:link href="http://marscfeng.github.io/tags/PATH/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Run Unix executable binary on MATLAB</title>
+      <link>http://marscfeng.github.io/post/Run-Unix-executable-binary-on-MATLAB/</link>
+      <pubDate>Wed, 18 Apr 2018 19:42:53 +0000</pubDate>
+      
+      <guid>http://marscfeng.github.io/post/Run-Unix-executable-binary-on-MATLAB/</guid>
+      <description>As a MATLAB guy and *nix guy, you may want to fulfill everything on MATLAB, or on command line. I will choose the former one.
+Call SYSTEM command in MATLAB MATLAB has its own bssh PATH, which is different from the *nix PATH. But a workaround consists in modifying the script (/Applications/MATLAB_R*****.app/bin/matlab) that launches MATLAB.
+$ cd /Applications/MATLAB_R*****.app/bin/ $ vi matlab # add the following line after #!/bin/sh $ export PATH:$PATH Then, add this matlab into your ~/.</description>
+    </item>
+    
+  </channel>
+</rss>
